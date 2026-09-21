@@ -73,7 +73,7 @@ function BeforeLoginPage(){
 
             <div style={{
                 position: 'absolute',
-                top: '15%',
+                top: '12%',
                 left: 0,
                 width: '100%',
                 padding: '0 10%',
