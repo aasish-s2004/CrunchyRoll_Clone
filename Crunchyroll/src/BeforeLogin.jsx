@@ -1,9 +1,7 @@
-import React, { useState } from "react" ;
 import BgImg from './assets/background.jpg';
 import Logo from './assets/Logo.png'
 
 function BeforeLoginPage(){
-    const [billing, setBilling] = useState('yearly');
     return(
         <div style={{backgroundColor:'black', position:'relative'}}>
 
