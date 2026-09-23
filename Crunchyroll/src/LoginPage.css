@@ -1,8 +1,106 @@
 .LoginBackground {
     background-color: black;
     position: relative;
-    background-size: cover;
-    enable-background: 0%;
+    background-position: cover;
+    min-height: 100vh;
     
 }
+.LoginHead {
+    position: absolute;
+    background-color: rgba(27, 27, 27, 0.418);
+    padding: 1% 44.7% 0.5% 45.3%;
+    cursor: pointer;
+    
+}
+.LoginLogin {
+    color:white;
+    position: absolute;
+    left: 47.75%;
+    top: 20.8%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.InputSpace {
+    position: absolute;
+    top: 32%;
+    left: 39.3%;
+    
+}
+.InputSpace input{
+    color:white;
+    background-color: black;
+    width: 26rem;
+    height: 5vh;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid ;
+    font-size: large;
 
+
+}
+.NextButton {
+    position: absolute;
+    top: 43.4%;
+    left: 39.4%;
+}
+
+.NextButton button {
+    width: 26rem;
+    height: 4vh;
+    background-color: black;
+    color: rgb(122, 118, 118);
+    border-radius: 40px;
+    border: none;
+    border: solid 2px;
+    cursor: pointer;
+}
+.LoginForgot{
+    position: absolute;
+    top: 49%;
+    left: 42%;
+
+}
+.LoginForgot span {
+    color:rgb(244, 117, 33) ;
+    font-size: 80%;
+    font-weight: 600;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.LoginForgot h1 {
+    color: white;
+    font-size: large;
+}
+.LoginFooter {
+    color: grey;
+     font-size: 80%;
+    font-weight: 600;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    border-bottom: solid 0.4px;
+    padding-bottom: 2vh;
+    padding-left: 20rem;
+    width: 65rem;
+    position: absolute;
+    bottom: 12%;
+    left: 23.4%;
+}
+.LoginFooter span {
+    padding: 0rem 1rem 0rem 1rem;
+}
+.SonyPictures{
+    color: grey;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 95%;
+    position: absolute;
+    bottom: 7%;
+    left: 24.7%;
+    
+}
+.SonyPictureLogin {
+    font-family: "Century Gothic", "Futura", "Avenir Next", "Helvetica Neue", sans-serif ;
+    font-weight: 500;
+    display: inline-block;
+    transform: scale(1.4,1.1);
+    padding-right: 20px;
+    
+}
