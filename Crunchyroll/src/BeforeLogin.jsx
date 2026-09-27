@@ -1,152 +1,35 @@
+import React from "react" ;
 import BgImg from './assets/background.jpg';
 import Logo from './assets/Logo.png'
 
 function BeforeLoginPage(){
     return(
-        <div style={{backgroundColor:'black', position:'relative'}}>
-
-            <div style={{
-                backgroundImage: `url(${BgImg})`,
-                backgroundSize: `cover`,
-                backgroundPosition: `center`,
-                backgroundRepeat: `no-repeat`,
-                minHeight: `100vh`,
-                width: `100%`
-            }}>
-            </div>
-
-           
-            <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                padding: '12px 40px',
-                backgroundColor: 'rgba(0,0,0,0.8)',
-                zIndex: 10,
-                boxSizing: 'border-box'
-            }}>
-
-                <div style={{ display:'flex', alignItems:'center', gap:'1px' ,marginRight:"10rem"}}>
-                    <img style={{ width:'48px', height:'30px', objectFit:'contain',marginLeft:"19rem"}} src={Logo} alt="Logo" />
-                    <span style={{
-                        color: 'rgb(244, 117, 33)',
-                        fontSize: '1.15rem',
-                        fontFamily: "'Fredoka', 'Comfortaa', sans-serif",
-                        fontWeight: '700'
-                    }}>Crunchyroll</span>
-                </div>
-
-                <div style={{ display:'flex', alignItems:'center', gap:'12px',marginRight:"22rem"  }}>
-                    <button style={{
-                        color: 'rgb(197, 182, 182)',
-                        borderRadius: '20px',
-                        border: '1px solid white',
-                        backgroundColor: 'transparent',
-                        fontSize: '0.9rem',
-                        fontFamily: 'sans-serif',
-                        fontWeight: '600',
-                        padding: '10px 28px',
-                        cursor: 'pointer',
-                        whiteSpace: 'nowrap'
-                    }}>LOG IN</button>
-
-                    <button style={{
-                        color: 'black',
-                        borderRadius: '20px',
-                        backgroundColor: 'rgb(255, 102, 0)',
-                        border: '1px solid rgb(225,102,0)',
-                        fontSize: '0.9rem',
-                        fontFamily: 'sans-serif',
-                        fontWeight: '600',
-                        padding: '10px 28px',
-                        cursor: 'pointer',
-                        whiteSpace: 'nowrap'
-                    }}>START FREE TRIAL</button>
-                </div>
-            </div>
-
-            <div style={{
-                position: 'absolute',
-                top: '12%',
-                left: 0,
-                width: '100%',
-                padding: '0 10%',
-                boxSizing: 'border-box',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '24px',
-                maxWidth: '700px'
-            }}>
-                <h1 style={{
-                    color: 'white',
-                    fontFamily: "'Outfit', system-ui, -apple-system, sans-serif",
-                    fontSize: '4.8rem',
-                    lineHeight: '110%',
-                    letterSpacing: '-0.025em',
-                    fontWeight: '800',
-                    width:"50rem",
-                    marginLeft:"14rem"
-                }}>The world's largest dedicated Anime collection on demand</h1>
-
-                <h2 style={{
-                    color: 'white',
-                    fontFamily: "'Lato', sans-serif",
-                    fontSize: '2.1rem',
-                    width:"50rem",
-                    lineHeight: '130%',
-                    fontWeight: '500',
-                    marginTop:"1.7rem",
-                    marginLeft:"14rem"
-                }}>Join Crunchyroll and discover the world of Anime</h2>
-
-                <button style={{
-                    color: 'black',
-                    borderRadius: '40px',
-                    backgroundColor: 'rgb(255, 102, 0)',
-                    border: '1px solid rgb(255,104,0)',
-                    fontSize: '1.2rem',
-                    fontFamily: 'sans-serif',
-                    fontWeight: '700',
-                    padding: '23px 36px',
-                    cursor: 'pointer',
-                    width: 'fit-content',
-                    whiteSpace: 'nowrap',
-                    height:"5rem",
-                    margin:"3rem 14rem "
-                }}>START FREE TRIAL</button>
-            </div>
-
-            <div style={{
-                padding: '60px 10%',
-                boxSizing: 'border-box'
-            }}>
-                <h1 style={{
-                    color: 'white',
-                    fontSize: '3.4rem',
-                    fontFamily: "'Outfit', system-ui, -apple-system, sans-serif",
-                    fontWeight: '800',
-                    margin:"1rem 1rem 1rem 32rem"
-                }}>Pick Your Premium</h1>
+        <div style={{backgroundColor:'black'}}>
+        <div style={{
+        backgroundSize: `cover`,
+        backgroundPosition: `center`,
+        backgroundRepeat: `no-repeat`,
+        minHeight: `100vh`,
+        width: `100%`
+        }}>
+            <img src={BgImg} alt="" />
+        </div>
+            <div>
+                <img style={{width:"1.3%",height:"2.5%",position:'absolute',left:'19.2%',top:'2.5%'}} src={Logo} alt="" />
+                <h1 style={{color:'rgb(244, 117, 33)',fontSize:'115%',position:"absolute",top:"-0.3%",left:"20.8%",fontFamily:"'Fredoka', 'Comfortaa', sans-serif",fontWeight:"700",backgroundColor:"rgb(0,0,0,0.8",width:"80%",height:"7%",paddingTop:"1.5%"}}>Crunchyroll</h1>
+                
             </div>
             <div>
-                <div>
-                    <h1 style={{color:"white",fontSize:"0.9rem",fontFamily:"sans-serif"}}>Monthly <p style={{backgroundColor:"rgb(255,102,0)" , color:"black",
-                        margin:"1rem ",
-                        borderRadius:"20px",
-                        padding:"5px",
-                        width:"15rem",
-                        display:"flex",
-                        alignItems:"center"
-                     }}>Yearly<p style={{fontSize:"0.7rem",margin:"2rem"}}>SAVE UPTO 60%</p></p></h1>
-                </div>
+                <h1 style={{color:"rgb(228, 217, 217)",borderRadius:"20px",borderColor:"rgb(228, 217, 217)",border:"1px solid white",width:"6%",fontSize:"90%",position:"absolute",top:"1.4%",left:"63.3%",fontFamily:"sans-serif",fontWeight:"100vh",padding:"10px 25px 10px 30px"}}>LOG IN</h1>
+                <h1 style={{color:"black",borderRadius:"20px",backgroundColor:"rgb(255, 102, 0)",border:"1px solid rgb(225,102,0)",width:"10.3%",fontSize:"90%",position:"absolute",top:"1.4%",left:"70%",fontFamily:"sans-serif",fontWeight:"100vh",padding:"10px 25px 10px 30px"}}>START FREE TRIAL</h1>
             </div>
-
+            <div>
+                <h1 style={{color:"white",position:"absolute",top:"13%",left:"23%",fontFamily:"'Outfit', 'Atyp', system-ui, -apple-system, sans-serif",fontSize:"480%",lineHeight:"105%",letterSpacing:"-0.025em",fontWeight:"800",maxWidth:"45%"}}>The world's largest dedicated Anime collection on demand</h1>
+                <h1 style={{color:"white",position:"absolute",top:"42.3%",left:"23%",fontFamily:"'Lato', sans-serif",fontSize:"200%",lineHeight:"105%",fontWeight:"500",maxWidth:"45%"}}>Join Crunchyroll and discover the world of Anime</h1>
+                <h1 style={{color:"black",borderRadius:"40px",backgroundColor:"rgb(255, 102, 0)",border:"1px solid rgb(255,104,0)",width:"12%", height:"8%" ,fontSize:"108%",position:"absolute",top:"53%",left:"23.5%",fontFamily:"sans-serif",fontWeight:"800vh",padding:"29px 25px 20px 37px"}}>START FREE TRIAL</h1>
+            </div>
         </div>
     )
 }
 
-export default BeforeLoginPage
+export default BeforeLoginPage 
