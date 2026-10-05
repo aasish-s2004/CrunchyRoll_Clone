@@ -1,10 +1,11 @@
 import './SignUpPage.css'
 import Logo from '../assets/Logo.png'
+import { Link } from 'react-router-dom'
 
 function SignUpPage () {
     return(
         <div className='LoginBackground'>
-            <div className='LoginHead'>
+           <Link to="/"> <div className='LoginHead'>
                                 <img style={{height:'3.4vh'}} src={Logo} alt="Logo" />
                                 <span style={{
                                     color: 'rgb(244, 117, 33)',
@@ -18,7 +19,7 @@ function SignUpPage () {
                                 }}>Crunchyroll</span>
 
                                                             
-                            </div>
+                            </div></Link>
 
                             <div className='SignUpLogin' ><h1 style={{fontWeight:"500"}}>Create Account</h1></div>
 
@@ -26,10 +27,10 @@ function SignUpPage () {
                                 <input type="text" placeholder='Email or Phone Number' />
                             </div>
 
-                            <div className='NextButton'><button>NEXT</button></div>
+                            <Link to="/home"><div className='NextButton'><button>NEXT</button></div></Link>
 
 
-                            <div className='SiginUpForgot'><h1>Already have an account?<span> LOG IN</span></h1></div>
+                            <Link to="/login"><div className='SignUpForgot'><h1>Already have an account?<span> LOG IN</span></h1></div></Link>
 
 
                             <div className='SignupPara'><p>By creating an account you're agreeing to our <span>Terms of Use</span> & <span>Privacy Policy</span>, and you confirm that you are at least 18 years of age.</p></div>

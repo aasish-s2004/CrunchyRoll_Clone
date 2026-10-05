@@ -1,5 +1,7 @@
 import BgImg from '../assets/background.jpg';
 import Logo from '../assets/Logo.png'
+import { Link } from 'react-router-dom';
+import './BeforeLoginPage.css'
 
 function BeforeLoginPage(){
     return(
@@ -40,8 +42,8 @@ function BeforeLoginPage(){
                     }}>Crunchyroll</span>
                 </div>
 
-                <div style={{ display:'flex', alignItems:'center', gap:'12px',marginRight:"22rem"  }}>
-                    <button style={{
+                <div className='LoginButton' style={{ display:'flex', alignItems:'center', gap:'12px',marginRight:"22rem"  }}>
+                   <Link to="/login"> <button  style={{
                         color: 'rgb(197, 182, 182)',
                         borderRadius: '20px',
                         border: '1px solid white',
@@ -52,9 +54,10 @@ function BeforeLoginPage(){
                         padding: '10px 28px',
                         cursor: 'pointer',
                         whiteSpace: 'nowrap'
-                    }}>LOG IN</button>
+                        
+                    }}>LOG IN</button></Link>
 
-                    <button style={{
+                    <button className='StartFreeButton' style={{
                         color: 'black',
                         borderRadius: '20px',
                         backgroundColor: 'rgb(255, 102, 0)',
@@ -102,7 +105,7 @@ function BeforeLoginPage(){
                     marginLeft:"14rem"
                 }}>Join Crunchyroll and discover the world of Anime</h2>
 
-                <button style={{
+                <button className='StartFreeButton' style={{
                     color: 'black',
                     borderRadius: '40px',
                     backgroundColor: 'rgb(255, 102, 0)',

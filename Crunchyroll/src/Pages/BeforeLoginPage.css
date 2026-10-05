@@ -1,0 +1,6 @@
+.LoginButton button :hover{
+    filter: brightness(10);
+}
+.StartFreeButton :hover{
+    filter: brightness(10);
+}
