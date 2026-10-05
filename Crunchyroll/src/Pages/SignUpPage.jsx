@@ -1,7 +1,7 @@
-import './LoginPage.css'
-import Logo from './assets/Logo.png'
+import './SignUpPage.css'
+import Logo from '../assets/Logo.png'
 
-function LoginPage () {
+function SignUpPage () {
     return(
         <div className='LoginBackground'>
             <div className='LoginHead'>
@@ -20,7 +20,7 @@ function LoginPage () {
                                                             
                             </div>
 
-                            <div className='LoginLogin' ><h1 style={{fontWeight:"500"}}>Log In</h1></div>
+                            <div className='SignUpLogin' ><h1 style={{fontWeight:"500"}}>Create Account</h1></div>
 
                             <div className='InputSpace'>
                                 <input type="text" placeholder='Email or Phone Number' />
@@ -29,7 +29,10 @@ function LoginPage () {
                             <div className='NextButton'><button>NEXT</button></div>
 
 
-                            <div className='LoginForgot'><h1><span>FORGOT PASSWORD?</span> | <span>CREATE ACCOUNT</span></h1></div>
+                            <div className='SiginUpForgot'><h1>Already have an account?<span> LOG IN</span></h1></div>
+
+
+                            <div className='SignupPara'><p>By creating an account you're agreeing to our <span>Terms of Use</span> & <span>Privacy Policy</span>, and you confirm that you are at least 18 years of age.</p></div>
 
 
                             <div className='LoginFooter'><span>Terms of Use</span> | <span>Privacy Policy</span> | <span>Cookie Consent Tool</span></div>
@@ -42,4 +45,4 @@ function LoginPage () {
 }
 
 
-export default LoginPage 
+export default SignUpPage

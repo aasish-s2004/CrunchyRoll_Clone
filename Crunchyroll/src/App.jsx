@@ -1,13 +1,15 @@
-import BeforeLoginPage from "./BeforeLogin";
-import LoginPage from "./LoginPage.jsx";
+import BeforeLoginPage from "./Pages/BeforeLogin";
+import LoginPage from "./Pages/LoginPage.jsx";
 import "./App.css"
-import SignUpPage from "./SignUpPage.jsx"
+import SignUpPage from "./Pages/SignUpPage.jsx"
+import HomePage from "./Pages/HomePage.jsx"
 function App() {
   return(
     <div className="background">
       {/* <BeforeLoginPage/> */}
-      <LoginPage/>
+      {/* <LoginPage/> */}
       {/* <SignUpPage/> */}
+      <HomePage/>
     </div>
   )
 }
