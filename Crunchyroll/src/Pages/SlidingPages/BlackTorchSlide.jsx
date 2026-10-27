@@ -1,6 +1,7 @@
 import BlackTorch from'./assets/BlackTorch-S1-KV1-UW-LTR.avif'
 import BlackTorchLogo from'./assets/BlackTorch-S1-UW-Logo-EN.avif'
 import './BlackTorchSlide.css'
+import SlidingNav from './Slidingnav'
 function BlackTorchSlide() {
     return(
         <div style={{backgroundColor:'black', position:'relative'}}>
@@ -18,6 +19,7 @@ function BlackTorchSlide() {
                             <button style={{paddingBottom:"8px"}}><span style={{fontSize:"170%", paddingTop:"10px"}}>▷</span> START WATCHING E1</button>
                             <button style={{fontSize:"100%", backgroundColor:"transparent", color:"rgb(244, 117, 33)", border:"solid rgb(244, 117, 33)"}} className='StartWatchingFav'>⛉</button>
                         </div>
+                        <div>{<SlidingNav/>}</div>
         </div>
     )
 }

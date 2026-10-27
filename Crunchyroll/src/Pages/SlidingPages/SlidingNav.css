@@ -1,0 +1,23 @@
+.SlidingNav div{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 71%;
+    left: 4.9%;
+}
+
+
+.SlidingNav div span{
+    background-color: rgba(140, 139, 139, 0.878);
+    border: none;
+    padding: 5px 10px 3px 15px;
+    border-radius: 20px;
+   
+
+}
+
+.SlidingNav div span:hover {
+    background-color: rgb(244, 117, 33);
+    padding-right: 20px;
+    padding-left: 20px;
+}

@@ -1,0 +1,172 @@
+.CrunchyrollFooter {
+    background-color: black;
+    color: rgb(163, 164, 164);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    padding: 80px 5% 40px 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.FooterTopSection {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    margin: 120px 18rem 120px 18rem;
+
+}
+
+.FooterBrandCol {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.FooterBrandLogo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    size: 20px;
+    cursor: pointer;
+    filter: saturate(00);
+}
+
+.FooterBrandLogo span {
+    color: rgb(199, 196, 196);
+    font-size: 2.3rem;
+    font-family: '"Maven Pro", "Helvetica Neue", Arial, sans-serif';
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.FooterSonyText {
+    font-size: 1rem;
+    color: rgb(148, 148, 148);
+    letter-spacing: 0.05em;
+    
+}
+.FooterSonyText span {
+    color: rgb(122, 123, 124);
+    
+}
+.FooterSonyBold {
+    font-weight: 50;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+.FooterDesc {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: rgb(151, 150, 150);
+}
+
+.FooterSocialIcons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.FooterSocialIcons span,
+.FooterSocialIcons a {
+    color: rgb(180, 180, 180);
+    font-size: 2.15rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.FooterSocialIcons span:hover,
+.FooterSocialIcons a:hover {
+    color: rgb(244, 117, 33);
+}
+
+.FooterLanguageBtn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 4px;
+    padding: 8px 14px;
+    font-size: 0.88rem;
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    transition: border-color 0.2s;
+}
+
+.FooterLanguageBtn:hover {
+    border-color: white;
+}
+
+.FooterNavColumns {
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.FooterCol {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    min-width: 170px;
+}
+
+.FooterColTitle {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.FooterCol a,
+.FooterCol p {
+    color: rgb(163, 164, 164);
+    font-size: 0.85rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    margin: 0;
+}
+
+.FooterCol a:hover,
+.FooterCol p:hover {
+    color: white;
+}
+
+.FooterCol .AccountFreeTrial {
+    color: rgb(244, 117, 33);
+    font-weight: 600;
+}
+
+.FooterCol .AccountFreeTrial:hover {
+    color: rgb(255, 140, 50);
+}
+
+.FooterBottomLegal {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.FooterBottomLegal a,
+.FooterBottomLegal span {
+    color: rgb(140, 140, 140);
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.FooterBottomLegal a:hover,
+.FooterBottomLegal span:hover {
+    color: white;
+}
+

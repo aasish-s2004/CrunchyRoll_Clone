@@ -1,0 +1,66 @@
+.SearchPageContainer {
+    background-color: rgb(29, 27, 27);
+    min-height: 100vh;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.SearchInputArea {
+    width: 48%;
+    max-width: 950px;
+    margin: 3vh auto 3vh auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.SearchInputField {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2.5px solid rgb(244, 117, 33);
+    color: white;
+    font-size: 2.3rem;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 400;
+    padding: 15px 0 16px 0;
+    outline: none;
+    box-sizing: border-box;
+    caret-color: rgb(244, 117, 33);
+}
+
+.SearchInputField::placeholder {
+    color: rgb(110, 110, 110);
+    font-weight: 300;
+}
+
+.SearchResultsGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px 16px;
+    padding: 0 4.8% 60px 4.8%;
+}
+
+@media (max-width: 1200px) {
+    .SearchResultsGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .SearchInputField {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .SearchInputArea {
+        width: 85%;
+    }
+    .SearchInputField {
+        font-size: 1.6rem;
+    }
+    .SearchResultsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

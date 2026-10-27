@@ -1,0 +1,136 @@
+.AnimePageContainer {
+    background-color: black;
+    min-height: 50vh;
+    padding: 105px 23% 120px 23%;
+    color: white;
+    box-sizing: border-box;
+}
+
+.AnimePageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.AnimePageTitle {
+    color: rgb(223, 221, 221);
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 650;
+    letter-spacing: -0.015em;
+}
+
+.AnimePageControls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.FilterSortButton {
+    background: transparent;
+    border: none;
+    color: rgb(163, 164, 164);
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+}
+
+.FilterSortButton:hover {
+    color: white;
+}
+
+.AnimePageSubTitle {
+    color: rgb(223, 221, 221);
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 1.3rem;
+    letter-spacing: -0.01em;
+}
+
+.AnimeGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px 16px;
+}
+
+.AnimeGridCard {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.GridPosterWrapper {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: rgb(27, 27, 27);
+    position: relative;
+}
+
+.GridPosterWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.AnimeGridCard:hover .GridPosterWrapper img {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+}
+
+.GridCardTitle {
+    color: white;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-top: 8px;
+    line-height: 1.25;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 2.3rem;
+    transition: color 0.2s;
+}
+
+.AnimeGridCard:hover .GridCardTitle {
+    color: rgb(244, 117, 33);
+}
+
+.GridCardTime {
+    color: rgb(151, 150, 150);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.8rem;
+    margin-top: 3px;
+}
+
+.GridCardTag {
+    color: rgb(151, 150, 150);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.8rem;
+    margin-top: 2px;
+}
+
+@media (max-width: 1200px) {
+    .AnimeGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .AnimeGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

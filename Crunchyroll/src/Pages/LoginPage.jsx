@@ -27,7 +27,7 @@ function LoginPage () {
                             <Link to="/home"><div className='NextButton'><button>NEXT</button></div></Link>
 
 
-                            <div className='LoginForgot'><h1><span>FORGOT PASSWORD?</span> | <Link to="/signup"><span>CREATE ACCOUNT</span></Link></h1></div>
+                            <div className='LoginForgot'><h1><span>FORGOT PASSWORD?</span> | <Link to="/signup"><span className='spancls'>CREATE ACCOUNT</span></Link></h1></div>
 
 
                             <div className='LoginFooter'><span>Terms of Use</span> | <span>Privacy Policy</span> | <span>Cookie Consent Tool</span></div>

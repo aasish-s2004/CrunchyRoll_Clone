@@ -5,13 +5,19 @@ nav{
     position: fixed;
     top: 0%;
     display: flex;
-    
+    z-index: 100;
 }
 .LogoName{
     position: fixed;
     top: 1.7%;
     left: 1%;
     cursor: pointer;
+}
+.LogoName a{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
 }
 .LogoName:hover{
     opacity: 2;
@@ -21,7 +27,13 @@ nav{
     display: flex;
     margin-left: 8.7%;
     width: 100%;
-    
+}
+.NavElements a{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 .NavElements button {
     background-color:rgb(36, 36, 36);
