@@ -164,16 +164,14 @@ function WatchTimeFinder() {
 
             <div className="WTFHeroSection">
                 <div className="WTFHeroContent">
-                    <div className="WTFBreadcrumb">
-                        <span>Home</span> <span style={{ margin: '0 8px' }}>&gt;</span> <span>Watch Time Finder</span>
-                    </div>
+                   
 
                     <div className="WTFTitleRow">
-                        <span className="WTFClockIcon">🕐</span>
+                        <span className="WTFClockIcon">⏳</span>
                         <h1 className="WTFTitle">WATCH TIME FINDER</h1>
                     </div>
 
-                    <h2 className="WTFSubtitle">Your time. Your anime.</h2>
+                    <h2 className="WTFSubtitle">More Watching. Less Scrolling.</h2>
                     <p className="WTFDescription">
                         Tell us how much time you have, and we'll find something great to watch.
                     </p>
@@ -214,17 +212,7 @@ function WatchTimeFinder() {
                     </button>
                 </div>
 
-                <div className="WTFHeroImage">
-                    <img
-                        src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain%2Cformat=auto%2Cquality=85%2Cwidth=480/display/keyart/T00091370-base_asset_2x3-en-US"
-                        alt="Naruto"
-                    />
-                </div>
-
-                <div className="WTFQuote">
-                    <p>"Not enough time is never a problem for a <span className="WTFQuoteHighlight">great anime</span>."</p>
-                    <p className="WTFQuoteAuthor">— Crunchyroll</p>
-                </div>
+                
             </div>
 
             {showResults && (

@@ -153,13 +153,14 @@ function Navbar({ active }) {
                                     height: "100%",
                                     display: "flex",
                                     alignItems: "center",
-                                    justifyContent: "center",
-                                    gap: "3px",
+                                    padding:"10px 5px 2px 15px",
+                                    margin:"0px -20px 0px 0px",
+                                    gap: "4px",
                                     cursor: "pointer"
                                 }}
                             >
-                                <img style={{ height: "26px", width: "26px", borderRadius: "50%" }} src={Anger} alt="Profile" />
-                                <span style={{ fontSize: "10px", padding: 0 }}>▼</span>
+                                <img style={{ height: "35px", width: "35px", borderRadius: "50%" }} src={Anger} alt="Profile" />
+                                <span style={{ fontSize: "12px", padding: "5px 10px 5px 5px", margin:"2px 2px 2px 2px"  }}>▼</span>
                             </button>
 
                             {showProfile && (
