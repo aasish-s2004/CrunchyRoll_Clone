@@ -7,6 +7,7 @@ import NewAnimePage from "./Pages/NewAnimePage.jsx"
 import PopularAnimePage from "./Pages/PopularAnimePage.jsx"
 import SimulcastPage from "./Pages/SimulcastPage.jsx"
 import SearchPage from "./Pages/SearchPage.jsx"
+import WatchTimeFinder from "./Pages/WatchTimeFinder.jsx"
 import { Routes , Route} from "react-router-dom"
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/simulcast" element={<SimulcastPage/>}/>
         <Route path="/simulcasts" element={<SimulcastPage/>}/>
         <Route path="/search" element={<SearchPage/>}/>
+        <Route path="/wtf" element={<WatchTimeFinder/>}/>
       </Routes>
     </div>
   )

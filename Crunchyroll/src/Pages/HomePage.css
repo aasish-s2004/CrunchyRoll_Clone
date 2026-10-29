@@ -26,7 +26,8 @@ nav{
 .NavElements{
     display: flex;
     margin-left: 8.7%;
-    width: 100%;
+    width: calc(100% - 8.7%);
+    height: 100%;
 }
 .NavElements a{
     text-decoration: none;
@@ -63,9 +64,58 @@ nav{
    
 }
 .NavElementsRight{
-
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    height: 100%;
+    margin-right: 1%;
 }
 .NavElementsRight button{
-    background-color: black;
-    color: white;
+    background-color: rgb(36, 36, 36);
+    color: rgb(163, 164, 164);
+}
+.NavElementsRight button:hover{
+    background-color: rgb(6, 6, 6);
+    color: rgb(213, 216, 216);
+}
+
+.NavPremiumWrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.PremiumHoverPopup {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 150;
+    padding-top: 5px;
+}
+
+.PremiumHoverPopup img {
+    display: block;
+    width: 300px;
+    border-radius: 6px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85);
+}
+
+.NavProfileWrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.ProfilePopupBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 90;
+    cursor: default;
 }

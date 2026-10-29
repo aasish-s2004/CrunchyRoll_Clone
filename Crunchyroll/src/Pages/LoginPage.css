@@ -24,8 +24,29 @@
     top: 32%;
     left: 39.3%;
     
+    
 }
 .InputSpace input{
+    color:white;
+    background-color: black;
+    width: 26rem;
+    height: 5vh;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid ;
+    font-size: large;
+
+
+}
+.PasswordSpace {
+    position: absolute;
+    top: 32%;
+    left: 39.3%;
+    /* visibility: hidden; */
+    
+    
+}
+.PasswordSpace input{
     color:white;
     background-color: black;
     width: 26rem;

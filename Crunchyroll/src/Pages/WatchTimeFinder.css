@@ -1,0 +1,261 @@
+.WTFHeroSection {
+    position: relative;
+    background-color: #0a0a0a;
+    padding: 80px 5% 50px 5%;
+    display: flex;
+    gap: 30px;
+    min-height: 420px;
+    overflow: hidden;
+}
+
+.WTFHeroContent {
+    flex: 1;
+    max-width: 500px;
+    z-index: 2;
+}
+
+.WTFBreadcrumb {
+    color: rgb(163, 164, 164);
+    font-size: 0.85rem;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin-bottom: 20px;
+}
+
+.WTFTitleRow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.WTFClockIcon {
+    font-size: 2.2rem;
+}
+
+.WTFTitle {
+    color: white;
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.WTFSubtitle {
+    color: white;
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.WTFDescription {
+    color: rgb(163, 164, 164);
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.95rem;
+    margin: 0 0 24px 0;
+    line-height: 1.5;
+}
+
+.WTFQuickButtons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.WTFQuickBtn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.WTFQuickBtn:hover {
+    border-color: rgb(244, 117, 33);
+    color: rgb(244, 117, 33);
+}
+
+.WTFQuickBtnActive {
+    background-color: rgb(244, 117, 33);
+    border-color: rgb(244, 117, 33);
+    color: white;
+}
+
+.WTFQuickBtnActive:hover {
+    background-color: rgb(255, 140, 50);
+    border-color: rgb(255, 140, 50);
+    color: white;
+}
+
+.WTFOrDivider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.WTFOrLine {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.WTFOrText {
+    color: rgb(163, 164, 164);
+    font-size: 0.85rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+}
+
+.WTFCustomTimeRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.WTFCustomLabel {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.WTFCustomInput {
+    width: 65px;
+    background-color: #1a1a1e;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+    text-align: center;
+    outline: none;
+}
+
+.WTFCustomInput:focus {
+    border-color: rgb(244, 117, 33);
+}
+
+.WTFFindBtn {
+    background-color: rgb(244, 117, 33);
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    width: 280px;
+    text-align: center;
+}
+
+.WTFFindBtn:hover {
+    background-color: rgb(255, 140, 50);
+}
+
+.WTFHeroImage {
+    position: absolute;
+    right: 15%;
+    top: 60px;
+    z-index: 1;
+}
+
+.WTFHeroImage img {
+    height: 420px;
+    border-radius: 6px;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+.WTFQuote {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    z-index: 2;
+}
+
+.WTFQuote p {
+    color: white;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.WTFQuoteHighlight {
+    color: rgb(244, 117, 33);
+    font-weight: 700;
+}
+
+.WTFQuoteAuthor {
+    color: rgb(163, 164, 164);
+    font-size: 0.85rem;
+    font-style: normal;
+    margin-top: 6px;
+}
+
+.WTFResultsSection {
+    background-color: #0f0f11;
+    padding: 24px 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.WTFResultsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.WTFResultsLeft {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.WTFResultsIcon {
+    font-size: 2rem;
+}
+
+.WTFResultsTitle {
+    color: white;
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.WTFResultsSub {
+    color: rgb(163, 164, 164);
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.85rem;
+    margin: 4px 0 0 0;
+}
+
+.WTFChangeTimeBtn {
+    background-color: transparent;
+    color: rgb(163, 164, 164);
+    border: none;
+    font-size: 0.9rem;
+    font-family: "DM Sans", sans-serif;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.WTFChangeTimeBtn:hover {
+    color: white;
+}
+

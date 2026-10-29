@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom'
 import Logo from '../assets/Logo.png'
 import Crown from '../assets/crown.png'
 import Anger from '../assets/angry.svg'
+import PremiumPopUp from '../assets/PremiumPopUp.png'
 import CategoryPopup from './CategoryPopup'
+import ProfilePopup from './ProfilePopup'
 
 function Navbar({ active }) {
     const [showCategories, setShowCategories] = useState(false)
+    const [showProfile, setShowProfile] = useState(false)
+    const [showPremium, setShowPremium] = useState(false)
 
     return(
         <div className="Navbar">
@@ -14,6 +18,12 @@ function Navbar({ active }) {
                 <div
                     className="CategoryBackdrop"
                     onClick={() => setShowCategories(false)}
+                />
+            )}
+            {showProfile && (
+                <div
+                    className="ProfilePopupBackdrop"
+                    onClick={() => setShowProfile(false)}
                 />
             )}
             <nav>
@@ -32,22 +42,19 @@ function Navbar({ active }) {
                     <Link to="/new" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <button style={{
                             minWidth:"4rem",
-                            color: active === 'new' ? 'white' : undefined,
-                            borderBottom: active === 'new' ? '2px solid rgb(244, 117, 33)' : undefined
+                    
                         }}>New</button>
                     </Link>
                     <Link to="/popular" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <button style={{
                             minWidth:"5.8rem",
-                            color: active === 'popular' ? 'white' : undefined,
-                            borderBottom: active === 'popular' ? '2px solid rgb(244, 117, 33)' : undefined
+                           
                         }}>Popular</button>
                     </Link>
                     <Link to="/simulcast" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <button style={{
                             minWidth:"6.5rem",
-                            color: active === 'simulcast' ? 'white' : undefined,
-                            borderBottom: active === 'simulcast' ? '2px solid rgb(244, 117, 33)' : undefined
+                            
                         }}>Simulcast</button>
                     </Link>
 
@@ -73,29 +80,93 @@ function Navbar({ active }) {
                         )}
                     </div>
 
+                    <Link to="/wtf" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <button style={{
+                            minWidth:"4rem",
+                            
+                        }}>WTF</button>
+                    </Link>
+
                     <p>|</p>
                     <button style={{minWidth:"5rem"}}>Manga</button>
                     <button style={{minWidth:"5rem"}}>Games</button>
                     <button style={{minWidth:"6rem"}}>News <span> ▼</span></button>
                     
-                    <button style={{display:"flex", minWidth:"6.2rem", position:"absolute", right:"10%"}}>
-                        <img style={{ height:'37%', marginTop:"15%", marginLeft:"12%" }} src={Crown} alt="Crown" />
-                        <div style={{marginTop:"14%", marginLeft:"7%"}}>
-                            <p style={{ color:"rgb(244, 174, 33)", fontSize:"70%"}}>TRY FREE</p>
-                            <p style={{color:"white", fontSize:"70%"}}>PREMIUM</p>
+                    <div className="NavElementsRight">
+                        <div
+                            className="NavPremiumWrapper"
+                            onMouseEnter={() => setShowPremium(true)}
+                            onMouseLeave={() => setShowPremium(false)}
+                        >
+                            <button style={{
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                minWidth: "6.2rem",
+                                height: "100%",
+                                padding: "0 8px",
+                                cursor: "pointer"
+                            }}>
+                                <img style={{ height: '21px', marginRight: "10px" }} src={Crown} alt="Crown" />
+                                <div style={{ textAlign: "left" }}>
+                                    <p style={{ color: "rgb(244, 174, 33)", fontSize: "65%", minWidth:"60px", margin: 0, lineHeight: 1.1 ,fontWeight:"600" }}>TRY FREE</p>
+                                    <p style={{ color: "white", fontSize: "65%", margin: "4px 5px 0px 0px", lineHeight: 1.1,fontWeight:"600" }}>PREMIUM</p>
+                                </div>
+                            </button>
+
+                            {showPremium && (
+                                <div className="PremiumHoverPopup">
+                                    <img src={PremiumPopUp} alt="Premium Popup" />
+                                </div>
+                            )}
                         </div>
-                    </button>
-                    <Link to="/search" style={{ textDecoration: 'none', color: 'inherit' }}>
+
+                        <Link to="/search" style={{ textDecoration: 'none', color: 'inherit', height: '100%', display: 'flex', alignItems: 'center' }}>
+                            <button style={{
+                                minWidth: "3rem",
+                                height: "100%",
+                                fontSize: "150%",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                marginRight:"2px",
+                                cursor: "pointer",
+                                fontWeight:"200",
+                            }}>🔍︎</button>
+                        </Link>
+
                         <button style={{
-                            minWidth:"3rem",
-                            fontSize:"150%",
-                            position:"absolute",
-                            right:"7.7%",
-                            color: active === 'search' ? 'rgb(244, 117, 33)' : undefined
-                        }}>🔍︎</button>
-                    </Link>
-                    <button style={{minWidth:"3rem", fontSize:"150%", position:"absolute", right:"5%"}}>⛉</button>
-                    <button style={{ position:"absolute", right:"0%"}}><img style={{height:"85%"}} src={Anger} alt="" /> <span style={{position:"relative", bottom:"20px"}}>▼</span></button>
+                            minWidth: "3rem",
+                            height: "100%",
+                            fontSize: "130%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            cursor: "pointer"
+                        }}>⛉</button>
+
+                        <div className="NavProfileWrapper">
+                            <button
+                                onClick={() => setShowProfile((prev) => !prev)}
+                                style={{
+                                    minWidth: "3.5rem",
+                                    height: "100%",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    gap: "3px",
+                                    cursor: "pointer"
+                                }}
+                            >
+                                <img style={{ height: "26px", width: "26px", borderRadius: "50%" }} src={Anger} alt="Profile" />
+                                <span style={{ fontSize: "10px", padding: 0 }}>▼</span>
+                            </button>
+
+                            {showProfile && (
+                                <ProfilePopup onClose={() => setShowProfile(false)} />
+                            )}
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>

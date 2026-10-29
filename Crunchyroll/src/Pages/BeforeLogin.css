@@ -1,0 +1,1034 @@
+/* ==========================================================================
+   BeforeLogin.css - Styles for Crunchyroll Landing Page
+   ========================================================================== */
+
+.BeforeLoginPageContainer {
+    background-color: black;
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* --- Hero Section --- */
+.HeroBackground {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.HeroNavbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.NavbarLogoContainer {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    margin-right: 10rem;
+}
+
+.NavbarLogoImg {
+    width: 48px;
+    height: 30px;
+    object-fit: contain;
+    margin-left: 19rem;
+}
+
+.NavbarLogoText {
+    color: rgb(244, 117, 33);
+    font-size: 1.15rem;
+    font-family: 'Fredoka', 'Comfortaa', sans-serif;
+    font-weight: 700;
+}
+
+.NavbarAuthButtons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 22rem;
+}
+
+.NavbarLoginBtn {
+    color: rgb(197, 182, 182);
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    padding: 10px 28px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: filter 0.2s;
+}
+
+.NavbarLoginBtn:hover {
+    filter: brightness(1.2);
+}
+
+.NavbarTrialBtn {
+    color: black;
+    border-radius: 20px;
+    background-color: rgb(255, 102, 0);
+    border: 1px solid rgb(225, 102, 0);
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    padding: 10px 28px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: filter 0.2s;
+}
+
+.NavbarTrialBtn:hover {
+    filter: brightness(1.1);
+}
+
+.HeroContent {
+    position: absolute;
+    top: 3%;
+    left: 0;
+    width: 100%;
+    padding: 0 10%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 700px;
+}
+
+.HeroTitle {
+    color: white;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    font-Size: 4.8rem;
+    line-height: 106%;
+    letter-spacing: -0.025em;
+    font-weight: 800;
+    width: 50rem;
+    margin-left: 14rem;
+}
+
+.HeroSubtitle {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 2.1rem;
+    width: 50rem;
+    line-height: 130%;
+    font-weight: 500;
+    margin-top: 1.7rem;
+    margin-left: 14rem;
+}
+
+.HeroTrialBtn {
+    color: black;
+    border-radius: 40px;
+    background-color: rgb(255, 102, 0);
+    border: 1px solid rgb(255, 104, 0);
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 23px 33px;
+    cursor: pointer;
+    width: fit-content;
+    white-space: nowrap;
+    height: 5.5rem;
+    margin: 2rem 14rem;
+    transition: filter 0.2s;
+}
+
+.HeroTrialBtn:hover {
+    filter: brightness(1.1);
+}
+
+/* --- Section 1: Limited Time Offer --- */
+.PlansSection {
+    padding: 60px 5% 40px 5%;
+    box-sizing: border-box;
+}
+
+.PlansHeader {
+    text-align: center;
+    margin-bottom: 54px;
+}
+
+.PlansTitle {
+    color: white;
+    font-size: 3.6rem;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.BillingToggleContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.BillingPill {
+    background-color: black;
+    border: 1.5px solid rgb(255, 102, 0);
+    border-radius: 35px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.BillingBtn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-family: sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.BillingBtnMonthly {
+    padding: 14px 43px;
+    font-size: 0.95rem;
+    font-weight: 750;
+}
+
+.BillingBtnYearly {
+    padding: 7px 38px;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.BillingBtnActive {
+    background-color: rgb(255, 102, 0);
+    color: black;
+    transition: smooth;
+}
+
+.BillingYearlyBadge {
+    font-size: 0.62rem;
+    letter-spacing: 0.5px;
+    margin-top: 1px;
+}
+
+.PlanCardsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.PlanCard {
+    border: 1.5px solid rgb(255, 102, 0);
+    border-radius: 16px;
+    background-color: black;
+    width: 345px;
+    padding: 40px 28px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.PlanCardMega {
+    border: 2px solid rgb(255, 102, 0);
+    padding: 24px 28px 40px 28px;
+}
+
+.PopularBadge {
+    color: rgb(255, 102, 0);
+    font-size: 0.82rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5px;
+}
+
+.PlanCardTitle {
+    color: white;
+    font-size: 2.1rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 8px 0;
+}
+
+.PlanCardPrice {
+    color: white;
+    font-size: 1.45rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 28px 0;
+}
+
+.PlanTrialBtn {
+    background-color: transparent;
+    border: 1.5px solid rgb(255, 102, 0);
+    color: rgb(255, 102, 0);
+    border-radius: 25px;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: filter 0.2s;
+}
+
+.PlanTrialBtn:hover {
+    filter: brightness(1.2);
+}
+
+.PlanTrialBtnOrange {
+    background-color: rgb(255, 102, 0);
+    border: none;
+    color: black;
+}
+
+.PlanSkipTrial {
+    color: white;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 14px 0 32px 0;
+    cursor: pointer;
+}
+
+.PlanFeaturesList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 0.88rem;
+    font-family: sans-serif;
+    color: rgb(220, 220, 220);
+}
+
+.FeatureRow {
+    display: flex;
+    gap: 10px;
+}
+
+.FeatureCheck {
+    color: rgb(255, 102, 0);
+    font-weight: bold;
+}
+
+.FeatureHighlight {
+    color: rgb(255, 102, 0);
+    font-weight: 700;
+}
+
+.PlansFootnote {
+    color: rgb(165, 165, 165);
+    font-size: 0.74rem;
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 650px;
+    margin: 35px auto 0 auto;
+    line-height: 1.5;
+}
+
+/* --- Section 2: Be the First to Watch --- */
+.WatchSection {
+    padding: 70px 0 60px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.WatchHeader {
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 0 20px;
+}
+
+.WatchTitle {
+    color: white;
+    font-size: 3.35rem;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    font-weight: 750;
+    margin: 0 0 30px 0;
+}
+
+.WatchSubtitle {
+    color: rgb(180, 180, 180);
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    margin: 0px 0px 0px 690px;
+    max-width: 30rem;
+}
+
+.WatchSliderWrapper {
+    position: relative;
+    left: 20.7%;
+    width: 57%;
+   
+    
+}
+
+.WatchCardsRow {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 5%;
+    scrollbar-width: none;
+    box-sizing: border-box;
+}
+
+.WatchCardsRow::-webkit-scrollbar {
+    display: none;
+}
+
+.WatchCard {
+    flex: 0 0 160px;
+    width: 180px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.WatchPosterWrapper {
+    width: 100%;
+    height: 240px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: rgb(27, 27, 27);
+}
+
+.WatchPosterImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
+.WatchCard:hover .WatchPosterImg {
+    transform: scale(1.03);
+}
+
+.WatchCardTitle {
+    color: white;
+    font-size: 0.92rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin: 8px 0 3px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.2s;
+}
+
+.WatchCard:hover .WatchCardTitle {
+    color: rgb(255, 102, 0);
+}
+
+.WatchCardTag {
+    color: rgb(140, 140, 140);
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.WatchScrollBtn {
+    position: absolute;
+    right: -4%;
+    top: 42%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 70px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    z-index: 2;
+    transition: background-color 0.2s;
+}
+
+.WatchScrollBtn:hover {
+    background-color: rgba(20, 20, 20, 0.95);
+    color: rgb(255, 102, 0);
+}
+
+.WatchScrollBtnLeft {
+    right: auto;
+    left: -4%;
+}
+
+/* --- Section 3: Already a Member? & Get More with Premium --- */
+.MemberSection {
+    padding: 90px 5% 50px 5%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.MemberTitle {
+    color: white;
+    font-size: 2.7rem;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    font-weight: 800;
+    margin: 0 0 22px 0;
+}
+
+.MemberLoginBtn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    padding: 14px 85px;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 80px;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.MemberLoginBtn:hover {
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.PremiumTitle {
+    color: white;
+    font-size: 3.4rem;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    font-weight: 800;
+    margin: 0 0 14px 0;
+}
+
+.PremiumSubtitle {
+    color: rgb(233, 231, 231);
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    max-width: 750px;
+    margin: 0 auto 35px auto;
+}
+
+.ComparePlansBtn {
+    background-color: rgb(255, 102, 0);
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0 auto 50px auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: filter 0.2s;
+}
+
+.ComparePlansBtn:hover {
+    filter: brightness(1.1);
+}
+
+.PremiumFeaturesGrid {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    flex-wrap: wrap;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.PremiumFeatureItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 145px;
+    gap: 14px;
+}
+
+.PremiumFeatureItem img {
+    width: 30rem;
+    height: 7.9rem;
+}
+
+.PremiumFeatureLabel {
+    color: white;
+    font-size: 0.85rem;
+    font-family: sans-serif;
+    line-height: 1.3;
+}
+
+.PremiumFeatureIcon {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.PremiumNote {
+    color: rgb(235, 233, 233);
+    font-size: 0.82rem;
+    font-family: sans-serif;
+    margin-top: 35px;
+}
+
+/* --- Section 4: Manga Introduction --- */
+.MangaSection {
+    padding: 30px 5% 50px 5%;
+    box-sizing: border-box;
+    display: fle;
+}
+
+.MangaCard {
+    background-size: cover;
+    background-position: center top;
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    max-height: 13rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+.MangaTextContent {
+    max-width: 490px;
+    margin-left: -40px;
+    background-color: black;
+    box-shadow: -10px 10px 70px 60px black;
+    
+}
+
+.MangaLogoRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.MangaLogoImg {
+    height: 35px;
+}
+
+.MangaLogoOrange {
+    color: rgb(255, 102, 0);
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.MangaLogoWhite {
+    color: white;
+    font-size: 1.0rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-top: 13px;
+}
+
+.MangaTitle {
+    color: white;
+    font-size: 1.45rem;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.MangaSubtitle {
+    color: rgb(255, 254, 254);
+    font-size: 0.95rem;
+    font-family: sans-serif;
+    margin: 0 0 18px 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.MangaOptionsBtn {
+    background-color: rgb(255, 102, 0);
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 13px 20px;
+    font-size: 0.95rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.MangaOptionsBtn:hover {
+    filter: brightness(1.1);
+}
+
+.MangaImageWrapper {
+    max-width: 450px;
+}
+
+.MangaDeviceImg {
+    width: 95%;
+    margin-left: 100px;
+    height: auto;
+    display: block;
+   
+}
+
+/* --- Section 5: FAQ & Questions --- */
+.FaqSection {
+    padding: 200px 5% 40px 5%;
+    box-sizing: border-box;
+}
+
+.FaqTitle {
+    color: white;
+    font-size: 3.1rem;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+
+.FaqListContainer {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.FaqItem {
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.FaqQuestionRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.FaqQuestionText {
+    color: white;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.FaqToggleIcon {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.FaqAnswerText {
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.QuestionsContainer {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.QuestionsTitle {
+    color: white;
+    font-size: 2.4rem;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+}
+
+.QuestionsSubtitle {
+    color: white;
+    font-size: 1rem;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.HelpCenterLink {
+    color: rgb(255, 102, 0);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.AvailabilityNote {
+    color: rgb(255, 254, 254);
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 45px auto 40px auto;
+}
+
+/* ==========================================================================
+   Section 6: Extended Footer Continuation (from uploaded images)
+   ========================================================================== */
+.ExtendedFooter {
+    background-color: black;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 40px 6% 60px 6%;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.FooterTopRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.FooterLogoWrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.FooterLogoImg {
+    height: 30px;
+    object-fit: contain;
+}
+
+.FooterLogoBrand {
+    color: rgb(244, 117, 33);
+    font-size: 1.35rem;
+    font-family: 'Fredoka', 'Comfortaa', sans-serif;
+    font-weight: 700;
+}
+
+.FooterNavAuth {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.FooterNavLoginBtn {
+    color: white;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+    font-size: 0.88rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 9px 26px;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.FooterNavLoginBtn:hover {
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.FooterNavTrialBtn {
+    color: black;
+    border-radius: 20px;
+    background-color: rgb(255, 102, 0);
+    border: 1px solid rgb(255, 102, 0);
+    font-size: 0.88rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 9px 24px;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.FooterNavTrialBtn:hover {
+    filter: brightness(1.1);
+}
+
+/* 6 Columns Grid */
+.FooterColumnsGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+    margin-bottom: 45px;
+    max-width: 75rem;
+    margin-left: 15%;
+}
+
+.FooterNavCol {
+    display: flex;
+    flex-direction: column;
+    max-width: 10rem;
+}
+
+.FooterColHeader {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.FooterNavLinksList {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.FooterNavLink {
+    color: rgb(155, 155, 155);
+    font-size: 0.9rem;
+    font-family: 'Inter', -apple-system, sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.15s;
+    line-height: 1.35;
+}
+
+.FooterNavLink:hover {
+    color: white;
+}
+
+/* Social links list in Column 6 */
+.SocialLinksList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.SocialLinkItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(155, 155, 155);
+    font-size: 0.82rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.SocialLinkItem:hover {
+    color: white;
+}
+
+.SocialIconSpan {
+    font-size: 1.05rem;
+    width: 16px;
+    text-align: center;
+}
+
+/* Bottom Sub-bar */
+.FooterSubBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 75rem;
+    margin-left: 15%;
+
+}
+
+.SonyPicturesText {
+    color: rgb(150, 150, 150);
+    font-size: 0.85rem;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.SonyBold {
+    font-family: "Century Gothic", "Futura", "Avenir Next", sans-serif;
+    font-weight: 600;
+    color: rgb(180, 180, 180);
+    letter-spacing: 0.08em;
+}
+
+.LanguageSelectorBtn {
+    background: transparent;
+    border: none;
+    color: rgb(190, 190, 190);
+    font-size: 0.82rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.04em;
+    transition: color 0.15s;
+}
+
+.LanguageSelectorBtn:hover {
+    color: white;
+}
+
+/* Bottom Descriptive Paragraphs */
+.FooterDescriptiveParagraphs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 75rem;
+    margin-left: 15%;
+}
+
+.FooterDescCol p {
+    color: rgb(125, 125, 125);
+    font-size: 0.77rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+
+.MoreDetailsBtn {
+    color: rgb(200, 200, 200);
+    font-size: 0.74rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    display: inline-block;
+    transition: color 0.15s;
+}
+
+.MoreDetailsBtn:hover {
+    color: white;
+}
+
+@media (max-width: 1100px) {
+    .FooterColumnsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .FooterColumnsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .FooterDescriptiveParagraphs {
+        grid-template-columns: 1fr;
+    }
+}
+
