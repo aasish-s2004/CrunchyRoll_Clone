@@ -103,10 +103,10 @@ function Navbar({ active }) {
                     </Link>
 
                     <p>|</p>
-                    <a href="/#mangaSection" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <Link to="https://www.crunchyroll.com/manga" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <button style={{ minWidth: "5rem" }}>Manga</button>
-                    </a>
-                    <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    </Link>
+                    <Link to="https://www.crunchyroll.com/games/" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <button style={{ minWidth: "5rem" }}>Games</button>
                     </Link>
 
@@ -278,11 +278,11 @@ function Navbar({ active }) {
 
                     <div className="MobileNavDivider"></div>
 
-                    <a href="/#mangaSection" className="MobileNavItem" onClick={closeAll}>
+                    <Link to="https://www.crunchyroll.com/manga" className="MobileNavItem" onClick={closeAll}>
                         <span>Manga</span>
-                    </a>
+                    </Link>
 
-                    <Link to="/" className="MobileNavItem" onClick={closeAll}>
+                    <Link to="https://www.crunchyroll.com/games/" className="MobileNavItem" onClick={closeAll}>
                         <span>Games</span>
                     </Link>
 
@@ -299,13 +299,14 @@ function Navbar({ active }) {
 
                         {mobileNewsOpen && (
                             <div className="MobileSubMenu">
-                                <span className="MobileSubItem" onClick={closeAll}>All News</span>
-                                <span className="MobileSubItem" onClick={closeAll}>Anime Awards</span>
+                                <Link to="https://www.crunchyroll.com/news" className="MobileSubItem" onClick={closeAll}>All News</Link>
+                                <Link to="https://www.crunchyroll.com/animeawards/" className="MobileSubItem" onClick={closeAll}>Anime Awards</Link>
+                                <Link to="https://www.crunchyroll.com/events/" className="MobileSubItem" onClick={closeAll}>Events & Experiences</Link>
                             </div>
                         )}
                     </div>
 
-                    <Link to="/category/music" className="MobileNavItem" onClick={closeAll}>
+                    <Link to="https://www.crunchyroll.com/music" className="MobileNavItem" onClick={closeAll}>
                         <span>Music Videos & Concerts</span>
                     </Link>
                 </div>

@@ -38,8 +38,8 @@ function Footer() {
                         <Link to="/popular">Browse Popular</Link>
                         <Link to="/simulcast">Browse Simulcasts</Link>
                         <p>Release Calendar</p>
-                        <p>News</p>
-                        <p>Games</p>
+                        <Link to="https://www.crunchyroll.com/news">News</Link>
+                        <Link to="https://www.crunchyroll.com/games/">Games</Link>
                     </div>
 
                     <div className="FooterCol">
@@ -78,4 +78,3 @@ function Footer() {
 }
 
 export default Footer
-

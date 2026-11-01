@@ -545,11 +545,11 @@ function BeforeLoginPage(){
                             <Link to="/popular" className="FooterNavLink">Browse All (A-Z)</Link>
                             <Link to="/simulcast" className="FooterNavLink">Browse Simulcasts</Link>
                             <span className="FooterNavLink">Release Calendar</span>
-                            <span className="FooterNavLink">Music Videos & Concerts</span>
-                            <span className="FooterNavLink">Games</span>
-                            <span className="FooterNavLink">News</span>
-                            <span className="FooterNavLink">Anime Awards</span>
-                            <span className="FooterNavLink">Events & Experiences</span>
+                            <Link to="https://www.crunchyroll.com/music" className="FooterNavLink">Music Videos & Concerts</Link>
+                            <Link to="https://www.crunchyroll.com/games/" className="FooterNavLink">Games</Link>
+                            <Link to="https://www.crunchyroll.com/news" className="FooterNavLink">News</Link>
+                            <Link to="https://www.crunchyroll.com/animeawards/" className="FooterNavLink">Anime Awards</Link>
+                            <Link to="https://www.crunchyroll.com/events/" className="FooterNavLink">Events & Experiences</Link>
                         </div>
                     </div>
 

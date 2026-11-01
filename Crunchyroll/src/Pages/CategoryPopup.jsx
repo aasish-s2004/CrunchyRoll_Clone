@@ -18,9 +18,9 @@ function CategoryPopup({ onClose }) {
                 <Link style={{color:"white" , maxHeight:"40px", padding:"20px 60px 20px 20px" }} to="/simulcast" className="CategoryLeftItem" onClick={onClose}>
                     Release Calendar
                 </Link>
-                <span style={{color:"white", maxHeight:"40px", padding:"20px 60px 20px 20px" }} className="CategoryLeftItem" onClick={onClose}>
+                <Link style={{color:"white", maxHeight:"40px", padding:"20px 60px 20px 20px" }} to="https://www.crunchyroll.com/music" className="CategoryLeftItem" onClick={onClose}>
                     Music Videos & Concerts
-                </span>
+                </Link>
             </div>
 
             <div className="CategoryRightSection">
