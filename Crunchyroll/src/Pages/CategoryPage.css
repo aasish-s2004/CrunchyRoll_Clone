@@ -1,0 +1,473 @@
+/* ==========================================================================
+   CATEGORY PAGES STYLING (Action, Adventure, Comedy, Drama, etc.)
+   ==========================================================================
+   
+   EDIT CARD & CONTAINER SIZES HERE:
+   You can change the values below to easily resize the cards and the container!
+   -------------------------------------------------------------------------- */
+
+.CategoryPageContainer {
+    /* 1. CONTAINER PADDING (Left & Right margins of the whole page content) */
+    --category-container-padding: 0% 2.8% 0%;
+    max-width: 57%;
+    margin-left: 20%;
+
+    /* 2. CARD SIZES (Change width & height of the anime cards) */
+    --category-card-width: 159px;          /* Width of each card (e.g. 180px, 200px, 220px) */
+    --category-card-height: 245px;         /* Height of the poster image (e.g. 270px, 300px) */
+    
+    /* 3. CARD SPACING */
+    --category-card-gap: 22px;             /* Space between adjacent cards */
+
+    /* 4. SLIDER SECTION SPACING */
+    --category-section-gap: 36px;          /* Vertical space between sliding rows */
+
+    /* Page background */
+    background-color: black;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   HERO BANNER (Category Title, Icon, Subtitle)
+   ========================================================================== */
+.CategoryHeroBanner {
+    padding: 105px 4.8% 25px 4.8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.CategoryHeroTitleRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.CategoryHeroIcon {
+    font-size: 2.2rem;
+}
+
+.CategoryHeroTitle {
+    color: white;
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.CategoryHeroSubtitle {
+    color: rgb(160, 160, 160);
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ==========================================================================
+   SLIDERS CONTAINER (10 Sections: Popular, New, Adventure, etc.)
+   ========================================================================== */
+.CategorySlidersWrapper {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--category-section-gap, 36px);
+    
+    
+}
+
+.CategorySliderSection {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.CategorySliderHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--category-container-padding, 0 4.8%);
+    margin-bottom: 16px;
+}
+
+.CategorySliderTitle {
+    color: white;
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.CategoryViewAllBtn {
+    background: transparent;
+    border: none;
+    color: rgb(244, 117, 33);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    transition: color 0.2s, transform 0.15s;
+}
+
+.CategoryViewAllBtn:hover {
+    color: rgb(255, 140, 50);
+    transform: translateX(3px);
+}
+
+.CategorySliderWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.CategorySliderRow {
+    display: flex;
+    gap: var(--category-card-gap, 22px);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: var(--category-container-padding, 0 4.8%);
+    scrollbar-width: none;
+    box-sizing: border-box;
+}
+
+.CategorySliderRow::-webkit-scrollbar {
+    display: none;
+}
+
+/* ==========================================================================
+   ANIME CARDS & POSTER WRAPPER
+   (Adjust width and height here directly if not using CSS variables)
+   ========================================================================== */
+.CategoryAnimeCard {
+    flex: 0 0 var(--category-card-width, 195px);
+    width: var(--category-card-width, 195px);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.CategoryPosterWrapper {
+    position: relative;
+    width: 100%;
+    height: var(--category-card-height, 295px);
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: rgb(27, 27, 27);
+}
+
+.CategoryPosterWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.CategoryAnimeCard:hover .CategoryPosterWrapper img {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+}
+
+.CategoryCardBadge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 7px;
+    background-color: rgba(0, 0, 0, 0.78);
+    color: white;
+    font-size: 0.72rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    border-bottom-right-radius: 4px;
+    z-index: 5;
+}
+
+.CategoryCardTitle {
+    color: white;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-top: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.2s;
+}
+
+.CategoryAnimeCard:hover .CategoryCardTitle {
+    color: rgb(244, 117, 33);
+}
+
+.CategoryCardTag {
+    color: rgb(151, 150, 150);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.8rem;
+    margin-top: 3px;
+}
+
+/* ==========================================================================
+   NAVIGATION SLIDER ARROWS (Left & Right)
+   ========================================================================== */
+.CategoryArrowBtn {
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 72px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    border: none;
+    font-size: 1.9rem;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+    outline: none;
+}
+
+.CategoryArrowBtn:hover {
+    background-color: rgba(20, 20, 20, 0.95);
+    color: rgb(244, 117, 33);
+}
+
+.CategoryArrowLeft {
+    left: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.CategoryArrowRight {
+    right: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* ==========================================================================
+   CARD HOVER OVERLAY (Rating, Seasons, Synopsis, Action Buttons)
+   ========================================================================== */
+.CategoryCardHoverOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 19, 23, 0.94);
+    backdrop-filter: blur(2px);
+    padding: 16px 14px 14px 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.22s ease-in-out;
+    z-index: 20;
+    border-radius: 3px;
+}
+
+.CategoryAnimeCard:hover .CategoryCardHoverOverlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.CategoryHoverTitle {
+    color: white;
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+.CategoryHoverRating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    font-size: 0.82rem;
+    font-family: "DM Sans", sans-serif;
+    margin-bottom: 6px;
+}
+
+.CategoryHoverScore {
+    font-weight: 700;
+}
+
+.CategoryHoverCount {
+    color: rgb(150, 150, 150);
+    font-size: 0.78rem;
+}
+
+.CategoryHoverSeasons {
+    color: rgb(180, 180, 180);
+    font-size: 0.78rem;
+    font-family: "DM Sans", sans-serif;
+    margin-bottom: 8px;
+}
+
+.CategoryHoverSeasons p {
+    margin: 1px 0;
+}
+
+.CategoryHoverSynopsis {
+    color: rgb(190, 190, 190);
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.74rem;
+    line-height: 1.38;
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    flex: 1;
+}
+
+.CategoryHoverActions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.CategoryHoverPlayBtn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgb(244, 117, 33);
+    color: black;
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.15s, background-color 0.15s;
+}
+
+.CategoryHoverPlayBtn:hover {
+    transform: scale(1.08);
+    background-color: rgb(255, 140, 50);
+}
+
+.CategoryHoverIconBtn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.CategoryHoverIconBtn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgb(244, 117, 33);
+    color: rgb(244, 117, 33);
+}
+
+.CategoryHeroLogo {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .CategoryPageContainer {
+        --category-container-padding: ;
+        --category-card-width: 140px;
+        --category-card-height: 210px;
+        --category-card-gap: 12px;
+        --category-section-gap: 24px;
+        max-width: 100%;
+        margin-left: 5%;
+    }
+
+    .CategoryHeroBanner {
+        padding: 75px 4% 15px 4%;
+    }
+
+    .CategoryHeroTitle {
+        font-size: 1.6rem;
+        
+    }
+
+    .CategoryHeroSubtitle {
+        font-size: 0.82rem;
+    }
+
+    .CategoryHeroLogo {
+        width: 28px;
+        height: 28px;
+    }
+
+    .CategorySliderTitle {
+        font-size: 1.2rem;
+        
+    }
+
+    .CategorySliderHeader {
+        margin-bottom: 10px;
+    }
+
+    .CategoryArrowBtn {
+        display: none;
+    }
+
+    .CategoryCardTitle {
+        font-size: 0.82rem;
+    }
+
+    .CategoryCardTag {
+        font-size: 0.72rem;
+    }
+}
+
+/* ==========================================================================
+   TABLET RESPONSIVE STYLES (601px - 1024px)
+   ========================================================================== */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .CategoryPageContainer {
+        --category-card-width: 165px;
+        --category-card-height: 250px;
+        --category-card-gap: 16px;
+        --category-section-gap: 30px;
+        margin-left: 2%;
+    }
+
+    .CategoryHeroBanner {
+        padding: 85px 4% 20px 4%;
+    }
+
+    .CategoryHeroTitle {
+        font-size: 2rem;
+    }
+
+    .CategorySliderTitle {
+        font-size: 1.4rem;
+    }
+}

@@ -7,11 +7,7 @@ function SlidingNav() {
         <div className="SlidingNav">
             <div>
                 <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+                
             </div>
         </div>
     )

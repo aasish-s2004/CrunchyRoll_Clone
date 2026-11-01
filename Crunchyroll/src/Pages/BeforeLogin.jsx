@@ -187,6 +187,17 @@ function BeforeLoginPage(){
         if (el) el.scrollIntoView({ behavior: 'smooth' });
     };
 
+    React.useEffect(() => {
+        if (window.location.hash === '#plansSection' || window.location.hash === '#plans') {
+            const el = document.getElementById('plansSection');
+            if (el) {
+                setTimeout(() => {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+    }, []);
+
     const scrollFirstToWatch = () => {
         if (firstToWatchRef.current) {
             firstToWatchRef.current.scrollBy({ left: 450, behavior: 'smooth' });
@@ -450,10 +461,16 @@ function BeforeLoginPage(){
             </div>
 
             {/* SECTION 4: Introducing Crunchyroll Manga! */}
-            <div className="MangaSection">
+            <div className="MangaSection" id="mangaSection">
                 <div className="MangaCard" style={{ backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.85) 20%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.2) 70%, transparent 100%), url(${MangaBg}) ` }}>
+                    <div className="MangaLogoRow MobileMangaLogo">
+                        <img src={Logo} alt="Logo" className="MangaLogoImg" />
+                        <span className="MangaLogoOrange">Crunchyroll</span>
+                        <span className="MangaLogoWhite">manga</span>
+                    </div>
+
                     <div className="MangaTextContent">
-                        <div className="MangaLogoRow">
+                        <div className="MangaLogoRow DesktopMangaLogo">
                             <img src={Logo} alt="Logo" className="MangaLogoImg" />
                             <span className="MangaLogoOrange">Crunchyroll</span>
                             <span className="MangaLogoWhite">manga</span>

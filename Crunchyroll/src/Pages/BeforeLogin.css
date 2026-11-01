@@ -222,6 +222,7 @@
     font-size: 0.62rem;
     letter-spacing: 0.5px;
     margin-top: 1px;
+    
 }
 
 .PlanCardsContainer {
@@ -624,6 +625,14 @@
     align-items: center;
     gap: 8px;
     margin-bottom: 12px;
+}
+
+.MobileMangaLogo {
+    display: none;
+}
+
+.DesktopMangaLogo {
+    display: flex;
 }
 
 .MangaLogoImg {
@@ -1032,3 +1041,240 @@
     }
 }
 
+
+
+/* ==========================================================================
+   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .HeroBackground{
+        width: 400px;
+        max-height: 300px;
+    }
+    .HeroNavbar {
+        padding: 12px;
+    }
+
+    .NavbarLogoImg{
+        position: absolute;
+        left: -80%;
+        top: 20%;
+    }
+
+    .NavbarAuthButtons {
+        gap: 8px;
+    }
+
+    .NavbarLoginBtn  {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        font-size: 0.8rem;
+    }
+    .NavbarTrialBtn{
+        visibility: hidden;
+    }
+
+    .HeroContent {
+        padding: 110px 3% 10px 4%;
+        position: absolute;
+        left: -60%;
+        top: 0.5%;
+        width: 40px;
+    }
+
+    .HeroTitle {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        width: 350px;
+        text-align: center;
+    }
+
+    .HeroSubtitle {
+        font-size: 1.4rem;
+        width: 350px;
+        text-align: center;
+    }
+
+    .HeroTrialBtn{
+        width: 200px;
+        height: 60px;
+        font-size: 0.8rem;
+        position: absolute;
+        top: 105%;
+        left: 220%;
+        
+    }
+
+    .PlansSection {
+        padding: 45px 4%;
+    }
+
+    .PlansTitle {
+        font-size: 1.8rem;
+    }
+
+    .PlanCardsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PlanCard {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .WatchSection {
+        padding: 40px 4%;
+    }
+
+    .WatchTitle {
+        font-size: 1.8rem;
+    }
+
+    .WatchCard {
+        flex: 0 0 145px;
+        width: 145px;
+    }
+
+    .WatchPosterWrapper {
+        height: 220px;
+    }
+
+    .WatchScrollBtn {
+        display: none;
+    }
+
+    .MangaSection {
+        padding: 30px 4% 40px 4%;
+    }
+
+    .MobileMangaLogo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        order: 1;
+    }
+
+    .DesktopMangaLogo {
+        display: none;
+    }
+
+    .MangaCard {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 35px 20px 25px 20px;
+        max-height: none;
+    }
+
+    .MangaImageWrapper {
+        order: 2;
+        width: 100%;
+        max-width: 320px;
+        margin: 10px auto 25px auto;
+    }
+
+    .MangaDeviceImg {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .MangaTextContent {
+        order: 3;
+        margin-left: 0;
+        background-color: transparent;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .MangaTitle {
+        font-size: 1.55rem;
+        margin-bottom: 8px;
+    }
+
+    .MangaSubtitle {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+
+    .MangaOptionsBtn {
+        background-color: rgb(255, 102, 0);
+        color: black;
+        border-radius: 25px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        width: 90%;
+        max-width: 320px;
+        padding: 14px 20px;
+        margin: 0 auto;
+    }
+
+    .FaqSection {
+        padding: 50px 4% 30px 4%;
+    }
+
+    .FaqTitle {
+        font-size: 1.8rem;
+    }
+
+    .FaqQuestionText {
+        font-size: 1.05rem;
+    }
+
+    .FooterColumnsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   TABLET RESPONSIVE STYLES (601px - 1024px)
+   ========================================================================== */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .NavbarAuthButtons {
+        margin-right: 2rem;
+    }
+
+    .NavbarLogoContainer {
+        margin-right: 2rem;
+    }
+
+    .NavbarLogoImg {
+        margin-left: 2rem;
+    }
+
+    .HeroContent {
+        padding: 0 4%;
+    }
+
+    .HeroTitle {
+        margin-left: 2rem;
+        width: 90%;
+        max-width: 580px;
+        font-size: 3.4rem;
+    }
+
+    .HeroSubtitle {
+        margin-left: 2rem;
+        width: 90%;
+        max-width: 580px;
+        font-size: 1.6rem;
+    }
+
+    .HeroTrialBtn {
+        margin: 2rem 2rem;
+    }
+
+    .PlanCardsContainer {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .PlanCard {
+        width: 310px;
+    }
+}

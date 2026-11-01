@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import './AnimeSliderCategory.css'
 import Logo from '../assets/Logo.png'
+import { useNavigate } from 'react-router-dom'
 
 const defaultTrendingAnime = [
     {
@@ -133,8 +134,9 @@ const defaultTrendingAnime = [
 
 
 
-function AnimeSliderCategory({ title = "Trending Anime in India", animeList = defaultTrendingAnime }) {
+function AnimeSliderCategory({ title = "Trending Anime in India", animeList = defaultTrendingAnime, onViewAll }) {
     const sliderRef = useRef(null)
+    const navigate = useNavigate()
 
     const slideLeft = () => {
         if (sliderRef.current) {
@@ -150,7 +152,14 @@ function AnimeSliderCategory({ title = "Trending Anime in India", animeList = de
 
     return (
         <div className="SliderCategoryContainer">
-            <h2 className="SliderCategoryTitle">{title}</h2>
+            <div className="SliderTitleRow">
+                <h2 className="SliderCategoryTitle">{title}</h2>
+                {onViewAll && (
+                    <button className="SliderViewAllBtn" onClick={onViewAll}>
+                        VIEW ALL &gt;
+                    </button>
+                )}
+            </div>
             <div className="SliderWrapper">
                 <button
                     className="SliderArrowBtn SliderArrowLeft"
@@ -162,7 +171,7 @@ function AnimeSliderCategory({ title = "Trending Anime in India", animeList = de
 
                 <div className="SliderCardsRow" ref={sliderRef}>
                     {animeList.map((anime) => (
-                        <div key={anime.id} className="AnimeSliderCard">
+                        <div key={anime.id} className="AnimeSliderCard" onClick={() => navigate('/watch')}>
                             <div className="SliderPosterWrapper">
                                 {anime.badge && (
                                     <div className="SliderCardBadge">
@@ -183,6 +192,48 @@ function AnimeSliderCategory({ title = "Trending Anime in India", animeList = de
                                         e.currentTarget.src = "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500&auto=format&fit=crop"
                                     }}
                                 />
+
+                                {/* Card Hover Overlay as shown in reference image */}
+                                <div className="CardHoverOverlay">
+                                    <h4 className="HoverOverlayTitle">{anime.title}</h4>
+                                    <div className="HoverOverlayRating">
+                                        <span className="HoverRatingScore">4.9 ★</span>
+                                        <span className="HoverRatingCount">(1M)</span>
+                                    </div>
+                                    <div className="HoverOverlaySeasons">
+                                        <p>2 Seasons</p>
+                                        <p>26 Episodes</p>
+                                    </div>
+                                    <p className="HoverOverlaySynopsis">
+                                        {anime.synopsis || "They say whatever doesn't kill you makes you stronger, but that's not the case for the world's weakest hunter Sung Jinwoo. After being brutally slaughtered by monsters in a high-ranking dungeon, Jinwoo came back..."}
+                                    </p>
+                                    <div className="HoverOverlayActions">
+                                        <button
+                                            className="HoverActionBtn HoverPlayBtn"
+                                            title="Watch Now"
+                                            onClick={(e) => { e.stopPropagation(); navigate('/watch'); }}
+                                            style={{fontSize:"1.6rem"}}
+                                        >
+                                            ▷
+                                        </button>
+                                        <button
+                                            className="HoverActionBtn HoverBookmarkBtn"
+                                            title="Add to Watchlist"
+                                            onClick={(e) => { e.stopPropagation(); alert(`Added ${anime.title} to Watchlist!`); }}
+                                            style={{fontSize:"1.4rem"}}
+                                        >
+                                            ⛉
+                                        </button>
+                                        <button
+                                            className="HoverActionBtn HoverPlusBtn"
+                                            title="Add to Crunchylist"
+                                            onClick={(e) => { e.stopPropagation(); alert(`Added ${anime.title} to Crunchylist!`); }}
+                                            style={{fontSize:"2rem"}}
+                                        >
+                                            +
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                             <h3 className="SliderCardTitle">{anime.title}</h3>
                             <p className="SliderCardTag">{anime.tag}</p>

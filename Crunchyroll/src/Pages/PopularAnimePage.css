@@ -127,3 +127,210 @@
     }
 }
 
+
+
+/* ==========================================================================
+   CARD HOVER OVERLAY (Rating, Seasons, Synopsis, Action Buttons)
+   ========================================================================== */
+.CategoryCardHoverOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 19, 23, 0.94);
+    backdrop-filter: blur(2px);
+    padding: 16px 14px 14px 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.22s ease-in-out;
+    z-index: 20;
+    border-radius: 3px;
+}
+
+.PopularGridCard:hover .CategoryCardHoverOverlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.CategoryHoverTitle {
+    color: white;
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+.CategoryHoverRating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    font-size: 0.82rem;
+    font-family: "DM Sans", sans-serif;
+    margin-bottom: 6px;
+}
+
+.CategoryHoverScore {
+    font-weight: 700;
+}
+
+.CategoryHoverCount {
+    color: rgb(150, 150, 150);
+    font-size: 0.78rem;
+}
+
+.CategoryHoverSeasons {
+    color: rgb(180, 180, 180);
+    font-size: 0.78rem;
+    font-family: "DM Sans", sans-serif;
+    margin-bottom: 8px;
+}
+
+.CategoryHoverSeasons p {
+    margin: 1px 0;
+}
+
+.CategoryHoverSynopsis {
+    color: rgb(190, 190, 190);
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.74rem;
+    line-height: 1.38;
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    flex: 1;
+}
+
+.CategoryHoverActions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.CategoryHoverPlayBtn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgb(244, 117, 33);
+    color: black;
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.15s, background-color 0.15s;
+}
+
+.CategoryHoverPlayBtn:hover {
+    transform: scale(1.08);
+    background-color: rgb(255, 140, 50);
+}
+
+.CategoryHoverIconBtn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.CategoryHoverIconBtn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgb(244, 117, 33);
+    color: rgb(244, 117, 33);
+}
+
+/* ==========================================================================
+   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .PopularPageContainer {
+        padding: 75px 4% 40px 4%;
+    }
+
+    .PopularPageHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 1.2rem;
+    }
+
+    .PopularPageControls {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .PopularFilterButton {
+        font-size: 0 !important;
+        padding: 4px;
+        gap: 0;
+    }
+
+    .PopularFilterButton span {
+        font-size: 1.35rem !important;
+        color: rgb(220, 220, 220);
+    }
+
+    .PopularPageTitle {
+        font-size: 1.35rem;
+        margin: 0;
+    }
+
+    .PopularPageSubTitle {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .PopularGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .PopularPosterWrapper {
+        height: 220px;
+    }
+
+    .PopularCardTitle {
+        font-size: 0.85rem;
+    }
+}
+
+/* ==========================================================================
+   TABLET RESPONSIVE STYLES (601px - 1024px)
+   ========================================================================== */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .PopularPageContainer {
+        padding: 90px 6% 70px 6%;
+    }
+
+    .PopularGrid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+
+    .PopularPosterWrapper {
+        height: auto;
+        aspect-ratio: 2 / 3;
+    }
+}

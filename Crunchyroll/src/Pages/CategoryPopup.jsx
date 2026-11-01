@@ -11,14 +11,14 @@ const themes = [
 function CategoryPopup({ onClose }) {
     return (
         <div className="CategoryPopupContainer">
-            <div className="CategoryLeftSection">
-                <Link to="/popular" className="CategoryLeftItem" onClick={onClose}>
+            <div className="CategoryLeftSection" >
+                <Link style={{color:"white", maxHeight:"40px", padding:"20px 60px 20px 20px" }} to="/popular" className="CategoryLeftItem" onClick={onClose}>
                     Browse All (A–Z)
                 </Link>
-                <Link to="/simulcast" className="CategoryLeftItem" onClick={onClose}>
+                <Link style={{color:"white" , maxHeight:"40px", padding:"20px 60px 20px 20px" }} to="/simulcast" className="CategoryLeftItem" onClick={onClose}>
                     Release Calendar
                 </Link>
-                <span className="CategoryLeftItem" onClick={onClose}>
+                <span style={{color:"white", maxHeight:"40px", padding:"20px 60px 20px 20px" }} className="CategoryLeftItem" onClick={onClose}>
                     Music Videos & Concerts
                 </span>
             </div>
@@ -27,11 +27,17 @@ function CategoryPopup({ onClose }) {
                 <div className="CategoryThemesHeader">THEMES</div>
                 <div className="CategoryThemesGrid">
                     {themes.map((column, colIdx) => (
-                        <div key={colIdx} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                        <div key={colIdx} style={{ display: 'flex', flexDirection: 'column' }}>
                             {column.map((theme, idx) => (
-                                <span key={idx} className="CategoryThemeItem" onClick={onClose}>
+                                <Link
+                                    key={idx}
+                                    to={`/category/${theme.toLowerCase().replace(/\s+/g, '-')}`}
+                                    className="CategoryThemeItem"
+                                    style={{color:"white"}}
+                                    onClick={onClose}
+                                >
                                     {theme}
-                                </span>
+                                </Link>
                             ))}
                         </div>
                     ))}

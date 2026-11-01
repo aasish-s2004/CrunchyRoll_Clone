@@ -10,7 +10,7 @@
 .SlidingNav div span{
     background-color: rgba(140, 139, 139, 0.878);
     border: none;
-    padding: 5px 10px 3px 15px;
+    padding: 5px 30px 3px 30px;
     border-radius: 20px;
    
 
@@ -18,6 +18,13 @@
 
 .SlidingNav div span:hover {
     background-color: rgb(244, 117, 33);
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+@media (max-width: 600px) {
+    .SlidingNav div{
+        top: 83%;
+        left: 39%;
+    }
 }

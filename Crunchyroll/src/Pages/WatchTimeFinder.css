@@ -264,3 +264,124 @@
     color: white;
 }
 
+
+
+/* ==========================================================================
+   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .WTFHeroSection {
+        padding: 70px 4% 30px 4%;
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .WTFTitleRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .WTFClockIcon {
+        font-size: 2.5rem;
+        margin-left: 0;
+    }
+
+    .WTFTitle {
+        font-size: 2.2rem;
+        max-width: 100%;
+        min-width: auto;
+    }
+
+    .WTFSubtitle {
+        font-size: 1.3rem;
+        min-width: auto;
+        margin: 10px 0;
+    }
+
+    .WTFDescription {
+        width: 100%;
+    }
+
+    .WTFQuickButtons {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .WTFQuickBtn {
+        padding: 8px 14px;
+        font-size: 0.78rem;
+    }
+
+    .WTFFindBtn {
+        width: 100%;
+    }
+
+    .WTFHeroImage {
+        display: none;
+    }
+
+    .WTFResultsSection {
+        padding: 20px 4%;
+    }
+
+    .WTFResultsHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .WTFAnimeCard {
+        flex: 0 0 145px;
+        width: 145px;
+    }
+
+    .WTFPosterWrapper {
+        height: 220px;
+    }
+
+    .WTFAnimeCardsRow {
+        gap: 14px;
+        padding: 0 4%;
+    }
+}
+
+/* ==========================================================================
+   TABLET RESPONSIVE STYLES (601px - 1024px)
+   ========================================================================== */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .WTFHeroSection {
+        padding: 80px 5% 40px 5%;
+        min-height: auto;
+    }
+
+    .WTFClockIcon {
+        font-size: 3.8rem;
+        margin-left: 0;
+    }
+
+    .WTFTitle {
+        font-size: 3.2rem;
+        max-width: 100%;
+        min-width: auto;
+    }
+
+    .WTFSubtitle {
+        font-size: 1.8rem;
+        min-width: auto;
+        margin: 15px 0;
+    }
+
+    .WTFDescription {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .WTFHeroImage {
+        display: none;
+    }
+
+    .WTFResultsSection {
+        padding: 22px 5%;
+    }
+}

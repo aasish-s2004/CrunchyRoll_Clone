@@ -42,7 +42,7 @@
     position: absolute;
     top: 32%;
     left: 39.3%;
-    /* visibility: hidden; */
+    visibility: hidden;
     
     
 }
@@ -132,4 +132,229 @@
     transform: scale(1.4,1.1);
     padding-right: 20px;
     
+}
+
+
+/* ==========================================================================
+   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .LoginBackground {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0 5% 24px 5%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .LoginBackground > a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .LoginHead {
+        position: static;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 0;
+        background-color: transparent;
+        left: auto;
+    }
+    .LoginHead img{
+        width: 33px;
+        min-height: 33px;
+        
+    }
+    .LoginHead span{
+        margin-top: 4%;
+    }
+
+    .LoginLogin {
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin-top: 50px;
+        margin-bottom: 38px;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .LoginLogin h1 {
+        margin: 0;
+    }
+
+    form {
+        width: 100%;
+        max-width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .InputSpace input {
+        position: static;
+        left: auto;
+        top: 20%;
+        width: 100%;
+        margin-top: -40px;
+        margin-bottom: 30px;
+        
+    }
+
+    .PasswordSpace {
+        position: static;
+        left: auto;
+        top: auto;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .InputSpace input, .PasswordSpace input {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 1rem;
+        height: 42px;
+    }
+
+    .NextButton {
+        position: static;
+        left: auto;
+        top: auto;
+        width: 100%;
+        margin-top: 6px;
+    }
+
+    .NextButton button {
+        width: 100%;
+        height: 42px;
+        font-size: 0.95rem;
+        font-weight: 700;
+    }
+
+    .LoginForgot {
+        position: static;
+        left: auto;
+        top: auto;
+        margin-top: 24px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .LoginForgot h1 {
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .LoginForgot span {
+        font-size: 0.8rem;
+    }
+
+    .LoginFooter {
+        position: static;
+        left: auto;
+        bottom: auto;
+        width: 100%;
+        max-width: 320px;
+        padding: 12px 0;
+        margin-top: auto;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 0.72rem;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .LoginFooter span {
+        padding: 0 4px;
+    }
+
+    .SonyPictures {
+        position: static;
+        left: auto;
+        bottom: auto;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 0.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .SonyPictureLogin {
+        padding-right: 0;
+        transform: none;
+        font-size: 0.75rem;
+    }
+}
+
+/* ==========================================================================
+   TABLET RESPONSIVE STYLES (601px - 1024px)
+   ========================================================================== */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .LoginHead {
+        padding: 14px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        left: 0;
+    }
+
+    .LoginLogin {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .InputSpace, .PasswordSpace {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .NextButton {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .LoginForgot {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+    }
+
+    .LoginFooter {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 600px;
+        padding-left: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .SonyPictures {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
 }

@@ -1,61 +1,79 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import './Navbar.css'
 import Logo from '../assets/Logo.png'
 import Crown from '../assets/crown.png'
 import Anger from '../assets/angry.svg'
 import PremiumPopUp from '../assets/PremiumPopUp.png'
 import CategoryPopup from './CategoryPopup'
 import ProfilePopup from './ProfilePopup'
+import NewsPopup from './NewsPopup'
 
 function Navbar({ active }) {
     const [showCategories, setShowCategories] = useState(false)
     const [showProfile, setShowProfile] = useState(false)
     const [showPremium, setShowPremium] = useState(false)
+    const [showNews, setShowNews] = useState(false)
 
-    return(
+    // Mobile state
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [mobileCategoriesOpen, setMobileCategoriesOpen] = useState(false)
+    const [mobileNewsOpen, setMobileNewsOpen] = useState(false)
+
+    const closeAll = () => {
+        setShowCategories(false)
+        setShowProfile(false)
+        setShowNews(false)
+        setMobileMenuOpen(false)
+    }
+
+    return (
         <div className="Navbar">
             {showCategories && (
-                <div
-                    className="CategoryBackdrop"
-                    onClick={() => setShowCategories(false)}
-                />
+                <div className="CategoryBackdrop" onClick={() => setShowCategories(false)} />
             )}
             {showProfile && (
-                <div
-                    className="ProfilePopupBackdrop"
-                    onClick={() => setShowProfile(false)}
-                />
+                <div className="ProfilePopupBackdrop" onClick={() => setShowProfile(false)} />
             )}
-            <nav>
-                <Link to="/home" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <div className="LogoName" style={{ display:'flex', alignItems:"center", gap:'4px'}}>
-                        <img style={{ height:'23px', marginBottom:"3px"}} src={Logo} alt="Logo" />
-                        <span style={{
-                            color: 'rgb(244, 117, 33)',
-                            fontSize: '1.17rem',
-                            fontFamily: '"Maven Pro", "Helvetica Neue", Arial, sans-serif',
-                            fontWeight: '700',
-                            }}>Crunchyroll</span>
+            {showNews && (
+                <div className="CategoryBackdrop" onClick={() => setShowNews(false)} />
+            )}
+            {mobileMenuOpen && (
+                <div className="MobileNavBackdrop" onClick={() => setMobileMenuOpen(false)} />
+            )}
+
+            <nav className="AppNavBar">
+                {/* Mobile Hamburger Toggle Button */}
+                <button
+                    type="button"
+                    className="NavHamburgerBtn"
+                    onClick={() => {
+                        setMobileMenuOpen((prev) => !prev)
+                        setShowProfile(false)
+                    }}
+                    aria-label="Toggle Navigation"
+                >
+                    {mobileMenuOpen ? '✕' : '☰'}
+                </button>
+
+                {/* Logo & Brand Name */}
+                <Link to="/home" style={{ textDecoration: 'none', color: 'inherit' }} onClick={closeAll}>
+                    <div className="LogoName">
+                        <img className="NavbarLogoIcon" src={Logo} alt="Logo" />
+                        <span className="NavbarLogoText">Crunchyroll</span>
                     </div>
                 </Link>
+
+                {/* Desktop Navigation Links */}
                 <div className="NavElements">
                     <Link to="/new" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <button style={{
-                            minWidth:"4rem",
-                    
-                        }}>New</button>
+                        <button style={{ minWidth: "4rem", color: active === 'new' ? 'rgb(244, 117, 33)' : undefined }}>New</button>
                     </Link>
                     <Link to="/popular" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <button style={{
-                            minWidth:"5.8rem",
-                           
-                        }}>Popular</button>
+                        <button style={{ minWidth: "5.8rem", color: active === 'popular' ? 'rgb(244, 117, 33)' : undefined }}>Popular</button>
                     </Link>
                     <Link to="/simulcast" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <button style={{
-                            minWidth:"6.5rem",
-                            
-                        }}>Simulcast</button>
+                        <button style={{ minWidth: "6.5rem", color: active === 'simulcast' ? 'rgb(244, 117, 33)' : undefined }}>Simulcast</button>
                     </Link>
 
                     <div
@@ -66,9 +84,9 @@ function Navbar({ active }) {
                             type="button"
                             onClick={() => setShowCategories((prev) => !prev)}
                             style={{
-                                minWidth:"7.5rem",
+                                minWidth: "7.5rem",
                                 height: "100%",
-                                color: showCategories ? 'white' : undefined,
+                                color: (showCategories || active === 'categories') ? 'white' : undefined,
                                 backgroundColor: showCategories ? '#141519' : undefined
                             }}
                         >
@@ -81,60 +99,78 @@ function Navbar({ active }) {
                     </div>
 
                     <Link to="/wtf" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <button style={{
-                            minWidth:"4rem",
-                            
-                        }}>WTF</button>
+                        <button style={{ minWidth: "4rem", color: active === 'wtf' ? 'rgb(244, 117, 33)' : undefined }}>WT-Finder O-O</button>
                     </Link>
 
                     <p>|</p>
-                    <button style={{minWidth:"5rem"}}>Manga</button>
-                    <button style={{minWidth:"5rem"}}>Games</button>
-                    <button style={{minWidth:"6rem"}}>News <span> ▼</span></button>
-                    
-                    <div className="NavElementsRight">
-                        <div
-                            className="NavPremiumWrapper"
-                            onMouseEnter={() => setShowPremium(true)}
-                            onMouseLeave={() => setShowPremium(false)}
-                        >
-                            <button style={{
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                minWidth: "6.2rem",
+                    <a href="/#mangaSection" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <button style={{ minWidth: "5rem" }}>Manga</button>
+                    </a>
+                    <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <button style={{ minWidth: "5rem" }}>Games</button>
+                    </Link>
+
+                    <div
+                        className="NavNewsWrapper"
+                        style={{ position: 'relative', height: '100%', display: 'flex', alignItems: 'center' }}
+                    >
+                        <button
+                            type="button"
+                            onClick={() => setShowNews((prev) => !prev)}
+                            style={{
+                                minWidth: "6rem",
                                 height: "100%",
-                                padding: "0 8px",
-                                cursor: "pointer"
-                            }}>
-                                <img style={{ height: '21px', marginRight: "10px" }} src={Crown} alt="Crown" />
-                                <div style={{ textAlign: "left" }}>
-                                    <p style={{ color: "rgb(244, 174, 33)", fontSize: "65%", minWidth:"60px", margin: 0, lineHeight: 1.1 ,fontWeight:"600" }}>TRY FREE</p>
-                                    <p style={{ color: "white", fontSize: "65%", margin: "4px 5px 0px 0px", lineHeight: 1.1,fontWeight:"600" }}>PREMIUM</p>
+                                color: showNews ? 'white' : undefined,
+                                backgroundColor: showNews ? '#141519' : undefined
+                            }}
+                        >
+                            News <span> ▼</span>
+                        </button>
+
+                        {showNews && (
+                            <NewsPopup onClose={() => setShowNews(false)} />
+                        )}
+                    </div>
+                </div>
+
+                {/* Right Action Icons (Desktop & Mobile) */}
+                <div className="NavElementsRight">
+                    <div
+                        className="NavPremiumWrapper"
+                        onMouseEnter={() => setShowPremium(true)}
+                        onMouseLeave={() => setShowPremium(false)}
+                    >
+                        <Link to="/#plansSection" style={{ textDecoration: 'none', color: 'inherit', height: '100%', display: 'flex', alignItems: 'center' }}>
+                            <button className="NavCrownBtn">
+                                <img className="NavCrownIcon" src={Crown} alt="Crown" />
+                                <div className="NavCrownText">
+                                    <p style={{ color: "rgb(244, 174, 33)", fontSize: "65%", minWidth: "60px", margin: 0, lineHeight: 1.1, fontWeight: "600" }}>TRY FREE</p>
+                                    <p style={{ color: "white", fontSize: "65%", margin: "4px 5px 0px 0px", lineHeight: 1.1, fontWeight: "600" }}>PREMIUM</p>
                                 </div>
                             </button>
-
-                            {showPremium && (
-                                <div className="PremiumHoverPopup">
-                                    <img src={PremiumPopUp} alt="Premium Popup" />
-                                </div>
-                            )}
-                        </div>
-
-                        <Link to="/search" style={{ textDecoration: 'none', color: 'inherit', height: '100%', display: 'flex', alignItems: 'center' }}>
-                            <button style={{
-                                minWidth: "3rem",
-                                height: "100%",
-                                fontSize: "150%",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                marginRight:"2px",
-                                cursor: "pointer",
-                                fontWeight:"200",
-                            }}>🔍︎</button>
                         </Link>
 
+                        {showPremium && (
+                            <div className="PremiumHoverPopup">
+                                <Link to="/#plansSection">
+                                    <img src={PremiumPopUp} alt="Premium Popup" style={{ cursor: 'pointer' }} />
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+
+                    <Link to="/search" style={{ textDecoration: 'none', color: 'inherit', height: '100%', display: 'flex', alignItems: 'center' }}>
+                        <button
+                            className="NavSearchBtn"
+                            style={{ color: active === 'search' ? 'rgb(244, 117, 33)' : undefined }}
+                            aria-label="Search"
+                        >
+                            🔍︎
+                        </button>
+                    </Link>
+
+                    {/* Watchlist Bookmark Icon (Desktop Only, matches reference image) */}
+                    <Link to="/watchlist" className="NavWatchlistDesktopOnly" style={{ textDecoration: 'none', color: 'inherit', height: '100%', display: 'flex', alignItems: 'center' }}>
                         <button style={{
                             minWidth: "3rem",
                             height: "100%",
@@ -142,34 +178,138 @@ function Navbar({ active }) {
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
-                            cursor: "pointer"
+                            cursor: "pointer",
+                            background: "transparent",
+                            border: "none",
+                            color: (active === 'watchlist' || active === 'mylists') ? 'rgb(244, 117, 33)' : 'rgb(163, 164, 164)'
                         }}>⛉</button>
+                    </Link>
 
-                        <div className="NavProfileWrapper">
-                            <button
-                                onClick={() => setShowProfile((prev) => !prev)}
-                                style={{
-                                    minWidth: "3.5rem",
-                                    height: "100%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    padding:"10px 5px 2px 15px",
-                                    margin:"0px -20px 0px 0px",
-                                    gap: "4px",
-                                    cursor: "pointer"
-                                }}
-                            >
-                                <img style={{ height: "35px", width: "35px", borderRadius: "50%" }} src={Anger} alt="Profile" />
-                                <span style={{ fontSize: "12px", padding: "5px 10px 5px 5px", margin:"2px 2px 2px 2px"  }}>▼</span>
-                            </button>
+                    {/* Profile Avatar & Popup Toggle */}
+                    <div className="NavProfileWrapper">
+                        <button
+                            onClick={() => {
+                                setShowProfile((prev) => !prev)
+                                setMobileMenuOpen(false)
+                            }}
+                            className="NavProfileBtn"
+                            aria-label="Profile Menu"
+                        >
+                            <img className="NavProfileAvatarImg" src={Anger} alt="Profile" />
+                            <span className="NavProfileArrow">▼</span>
+                        </button>
 
-                            {showProfile && (
-                                <ProfilePopup onClose={() => setShowProfile(false)} />
-                            )}
-                        </div>
+                        {showProfile && (
+                            <ProfilePopup onClose={() => setShowProfile(false)} />
+                        )}
                     </div>
                 </div>
             </nav>
+
+            {/* Mobile Navigation Drawer (1:1 with reference images) */}
+            {mobileMenuOpen && (
+                <div className="MobileNavDrawer">
+                    <Link to="/new" className={`MobileNavItem ${active === 'new' ? 'ActiveItem' : ''}`} onClick={closeAll}>
+                        <span>New</span>
+                    </Link>
+
+                    <Link to="/popular" className={`MobileNavItem ${active === 'popular' ? 'ActiveItem' : ''}`} onClick={closeAll}>
+                        <span>Popular</span>
+                    </Link>
+
+                    <Link to="/popular" className="MobileNavItem" onClick={closeAll}>
+                        <span>Browse All (A–Z)</span>
+                    </Link>
+
+                    <Link to="/simulcast" className={`MobileNavItem ${active === 'simulcast' ? 'ActiveItem' : ''}`} onClick={closeAll}>
+                        <span>Simulcast Season</span>
+                    </Link>
+
+                    <Link to="/simulcast" className="MobileNavItem" onClick={closeAll}>
+                        <span>Release Calendar</span>
+                    </Link>
+
+                    {/* Categories Accordion */}
+                    <div className="MobileAccordionBlock">
+                        <button
+                            type="button"
+                            className="MobileNavItem"
+                            onClick={() => setMobileCategoriesOpen((prev) => !prev)}
+                        >
+                            <span>Categories</span>
+                            <span className={`MobileChevron ${mobileCategoriesOpen ? 'Expanded' : ''}`}>▼</span>
+                        </button>
+
+                        {mobileCategoriesOpen && (
+                            <div className="MobileSubMenu">
+                                {[
+                                    { name: 'Action', path: '/category/action' },
+                                    { name: 'Adventure', path: '/category/adventure' },
+                                    { name: 'Comedy', path: '/category/comedy' },
+                                    { name: 'Drama', path: '/category/drama' },
+                                    { name: 'Fantasy', path: '/category/fantasy' },
+                                    { name: 'Music', path: '/category/music' },
+                                    { name: 'Romance', path: '/category/romance' },
+                                    { name: 'Sci-Fi', path: '/category/sci-fi' },
+                                    { name: 'Seinen', path: '/category/seinen' },
+                                    { name: 'Shojo', path: '/category/shojo' },
+                                    { name: 'Shonen', path: '/category/shonen' },
+                                    { name: 'Slice of life', path: '/category/slice-of-life' },
+                                    { name: 'Sports', path: '/category/sports' },
+                                    { name: 'Supernatural', path: '/category/supernatural' },
+                                    { name: 'Thriller', path: '/category/thriller' }
+                                ].map((cat) => (
+                                    <Link
+                                        key={cat.name}
+                                        to={cat.path}
+                                        className="MobileSubItem"
+                                        onClick={closeAll}
+                                    >
+                                        {cat.name}
+                                    </Link>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
+                    <Link to="/wtf" className={`MobileNavItem ${active === 'wtf' ? 'ActiveItem' : ''}`} onClick={closeAll}>
+                        <span>WT-Finder</span>
+                    </Link>
+
+                    <div className="MobileNavDivider"></div>
+
+                    <a href="/#mangaSection" className="MobileNavItem" onClick={closeAll}>
+                        <span>Manga</span>
+                    </a>
+
+                    <Link to="/" className="MobileNavItem" onClick={closeAll}>
+                        <span>Games</span>
+                    </Link>
+
+                    {/* News Accordion */}
+                    <div className="MobileAccordionBlock">
+                        <button
+                            type="button"
+                            className="MobileNavItem"
+                            onClick={() => setMobileNewsOpen((prev) => !prev)}
+                        >
+                            <span>News</span>
+                            <span className={`MobileChevron ${mobileNewsOpen ? 'Expanded' : ''}`}>▼</span>
+                        </button>
+
+                        {mobileNewsOpen && (
+                            <div className="MobileSubMenu">
+                                <span className="MobileSubItem" onClick={closeAll}>All News</span>
+                                <span className="MobileSubItem" onClick={closeAll}>Anime Awards</span>
+                            </div>
+                        )}
+                    </div>
+
+                    <Link to="/category/music" className="MobileNavItem" onClick={closeAll}>
+                        <span>Music Videos & Concerts</span>
+                    </Link>
+                </div>
+            )}
         </div>
     )
 }

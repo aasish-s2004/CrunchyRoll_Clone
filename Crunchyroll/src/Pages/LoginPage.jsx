@@ -21,7 +21,7 @@ function LoginPage () {
         e.preventDefault()
         let email1 = "aasish@gmail.com"
         if(email===email1){
-            
+            navigate("/home")
         }
         else{
             alert('email is not valid')
@@ -62,11 +62,9 @@ function LoginPage () {
                                 <input type="email" placeholder='Email or Phone Number' />
                             </div>
 
-                            <div className='PasswordSpace'  onChange={(e)=>setPass(e.target.value)}>
-                                <input type="password" placeholder='Password' />
-                            </div>
+                            
 
-                            {/* <Link to="/home">*/}<div className='NextButton'><button type='submit' onClick={passCheck}>NEXT</button></div>{/*</Link>*/} 
+                            {/* <Link to="/home">*/}<div className='NextButton'><button type='submit' onClick={emailCheck}>NEXT</button></div>{/*</Link>*/} 
                             </form>
 
 

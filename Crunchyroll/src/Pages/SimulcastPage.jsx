@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './SimulcastPage.css'
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -133,6 +134,8 @@ const simulcastAnimeList = [
 ]
 
 function SimulcastPage() {
+    const navigate = useNavigate()
+
     return (
         <div style={{ backgroundColor: 'black', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <Navbar active="simulcast" />
@@ -146,8 +149,8 @@ function SimulcastPage() {
 
                 <div className="SimulcastGrid">
                     {simulcastAnimeList.map((anime) => (
-                        <div key={anime.id} className="SimulcastGridCard">
-                            <div className="SimulcastPosterWrapper">
+                        <div key={anime.id} className="SimulcastGridCard" onClick={() => navigate('/watch')}>
+                            <div className="SimulcastPosterWrapper" style={{ border: "none" }}>
                                 <img
                                     src={anime.image}
                                     alt={anime.title}
@@ -157,6 +160,59 @@ function SimulcastPage() {
                                         e.currentTarget.src = "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500&auto=format&fit=crop"
                                     }}
                                 />
+
+                                <div className="CategoryCardHoverOverlay" style={{ border: "none" }}>
+                                    <div>
+                                        <h4 className="CategoryHoverTitle">{anime.title}</h4>
+                                        <div className="CategoryHoverRating">
+                                            <span className="CategoryHoverScore" style={{ color: "rgb(145, 144, 144)" }}>{anime.rating || "4.8 ★"}</span>
+                                            <span className="CategoryHoverCount">{anime.ratingCount || "(500K)"}</span>
+                                        </div>
+                                        <div className="CategoryHoverSeasons">
+                                            <p>{anime.seasons || "2 Seasons"}</p>
+                                            <p>{anime.episodes || "24 Episodes"}</p>
+                                        </div>
+                                        <p className="CategoryHoverSynopsis" style={{ border: "none" }}>
+                                            {anime.synopsis || "Follow the thrilling adventures, epic battles, and unforgettable moments in this acclaimed anime series."}
+                                        </p>
+                                    </div>
+
+                                    <div className="CategoryHoverActions" style={{ border: "none" }}>
+                                        <button
+                                            className="CategoryHoverPlayBtn"
+                                            title="Start Watching"
+                                            onClick={(e) => {
+                                                e.stopPropagation()
+                                                navigate('/watch')
+                                            }}
+                                            style={{ background: "transparent", color: "#f47521", padding: "0px 10px 0px 0px" }}
+                                        >
+                                            ▶
+                                        </button>
+                                        <button
+                                            className="CategoryHoverIconBtn"
+                                            title="Add to Watchlist"
+                                            onClick={(e) => {
+                                                e.stopPropagation()
+                                                alert(`Added ${anime.title} to Watchlist!`)
+                                            }}
+                                            style={{ background: "transparent", border: "none", color: "#f47521", margin: "5px 10px 0px 6px" }}
+                                        >
+                                            ⛉
+                                        </button>
+                                        <button
+                                            className="CategoryHoverIconBtn"
+                                            title="Add to Crunchylist"
+                                            onClick={(e) => {
+                                                e.stopPropagation()
+                                                alert(`Added ${anime.title} to Crunchylist!`)
+                                            }}
+                                            style={{ background: "transparent", border: "none", color: "#f47521", margin: "6px 40px 0px 0px", fontSize: "25px" }}
+                                        >
+                                            +
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                             <h3 className="SimulcastCardTitle">{anime.title}</h3>
                             <p className="SimulcastCardTag">{anime.tag}</p>

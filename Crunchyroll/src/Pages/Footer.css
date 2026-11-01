@@ -2,8 +2,8 @@
     background-color: black;
     color: rgb(163, 164, 164);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    padding: 80px 5% 40px 5%;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0px 5% 40px 5%;
+   
     box-sizing: border-box;
     width: 100%;
 }
@@ -30,6 +30,10 @@
     size: 20px;
     cursor: pointer;
     filter: saturate(00);
+}
+
+.FooterBrandLogo:hover{
+    filter: brightness(1.2);
 }
 
 .FooterBrandLogo span {
@@ -170,3 +174,42 @@
     color: white;
 }
 
+
+
+/* ==========================================================================
+   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .CrunchyrollFooter{
+        width: 400px;
+       
+    }
+    .FooterTopSection {
+        flex-direction: column;
+        min-width: 100%;
+        margin: 40px 0;
+        gap: 30px;
+    }
+
+    .FooterLinksRow {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .FooterColTitle {
+        font-size: 25px
+    }
+
+    .FooterCol a,
+    .FooterCol p {
+    
+    font-size: 1rem;
+    
+}
+
+
+    .FooterBottomLegal {
+        gap: 14px;
+        padding-top: 25px;
+    }
+}

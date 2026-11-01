@@ -1,0 +1,337 @@
+.SwitchProfilePageContainer {
+    width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.SwitchProfileOverlay {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.88) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.SwitchProfileTitle {
+    color: white;
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 2.12rem;
+    font-weight: 700;
+    margin-bottom: 70px;
+    text-align: center;
+    letter-spacing: -0.04em;
+}
+
+.SwitchProfileList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 55px;
+}
+
+.SwitchProfileItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.SwitchProfileItem:hover {
+    transform: scale(1.05);
+}
+
+.ProfileAvatarBox {
+    width: 146px;
+    height: 146px;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.SwitchProfileItem:hover .ProfileAvatarBox {
+    background-color: rgb(34, 34, 34);
+    
+}
+
+.ProfileAvatarBox img {
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    object-fit: cover;
+    border:solid  white;
+}
+
+.AddNewProfileBox {
+    width: 120px;
+    height: 120px;
+    border: 2px solid rgb(244, 174, 33);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.45);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.SwitchProfileItem:hover .AddNewProfileBox {
+    border-color: rgb(255, 190, 60);
+    box-shadow: 0 0 15px rgba(244, 174, 33, 0.4);
+}
+
+.AddNewPlus {
+    color: rgb(244, 174, 33);
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.AddNewCrownBadge {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #141519;
+    border: 2px solid rgb(244, 174, 33);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AddNewCrownBadge img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.ProfileItemLabel {
+    color: rgb(220, 220, 220);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 14px;
+    text-align: center;
+}
+
+.ManageProfilesBtn {
+    background: transparent;
+    border: 1px solid rgb(195, 195, 195);
+    color: rgb(195, 195, 195);
+    padding: 12px 16px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.ManageProfilesBtn:hover {
+    
+    filter: brightness(50);
+}
+
+.SwitchProfileLogoutBtn {
+    background: transparent;
+    border: none;
+    color: rgb(195, 195, 195);
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.SwitchProfileLogoutBtn:hover {
+    color: white;
+    
+}
+
+/* Premium Modal */
+.PremiumModalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.78);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.PremiumModalCard {
+    background-color: #23252b;
+    width: 90%;
+    max-width: 530px;
+    padding: 42px 40px 38px 40px;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.PremiumModalCloseBtn {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: rgb(180, 180, 180);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.PremiumModalCloseBtn:hover {
+    color: white;
+}
+
+.PremiumModalTitle {
+    color: white;
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin: 10px 0 14px 0;
+}
+
+.PremiumModalDesc {
+    color: rgb(175, 175, 175);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin: 0 0 32px 0;
+}
+
+.PremiumModalBtnRow {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.PremiumModalUpgradeBtn {
+    flex: 1;
+    background-color: rgb(244, 174, 33);
+    color: #141519;
+    border: none;
+    padding: 12px 0;
+    font-size: 0.92rem;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.PremiumModalUpgradeBtn:hover {
+    background-color: rgb(255, 190, 50);
+}
+
+.PremiumModalNotNowBtn {
+    flex: 1;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    padding: 12px 0;
+    font-size: 0.92rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.PremiumModalNotNowBtn:hover {
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+
+
+/* ==========================================================================
+   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .SwitchProfileTitle {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .SwitchProfileList {
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 35px;
+    }
+
+    .ProfileAvatarBox {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ProfileAvatarOverlay {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ProfileAvatarImg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ProfileAddBox {
+        width: 100px;
+        height: 100px;
+        font-size: 2.2rem;
+    }
+
+    .PremiumModalCard {
+        width: 90%;
+        padding: 25px 20px;
+    }
+
+    .PremiumModalBtnRow {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ==========================================================================
+   TABLET RESPONSIVE STYLES (601px - 1024px)
+   ========================================================================== */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .SwitchProfileContainer {
+        padding: 90px 4% 40px 4%;
+    }
+
+    .ProfilesRow {
+        gap: 30px;
+    }
+
+    .PremiumModalCard {
+        width: 480px;
+        max-width: 90vw;
+    }
+}

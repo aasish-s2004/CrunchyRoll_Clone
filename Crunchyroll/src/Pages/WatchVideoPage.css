@@ -1,0 +1,535 @@
+.WatchVideoPageContainer {
+    background-color: black;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.WatchVideoMain {
+    padding-top: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.VideoPlayerBox {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 500px;
+    background-color: #0d0e12;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.VideoBgFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    filter: brightness(0.72);
+}
+
+.VideoOverlayShade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.5) 100%);
+}
+
+/* Orange Premium Card */
+.PlayerUpsellCard {
+    position: relative;
+    z-index: 10;
+    width: 440px;
+    height: 100%;
+    background: radial-gradient(circle at 10% 20%, #ff8326 0%, #f46108 50%, #e04e00 100%);
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.7);
+    padding: 35px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: visible;
+    background-color: #f46108;
+}
+
+/* Mascot girl standing outside the card on the left */
+.UpsellMascotOutside {
+    position: absolute;
+    left: -210px;
+    bottom: -10px;
+    height: 126%;
+    max-height: 490px;
+    z-index: 25;
+    pointer-events: none;
+    filter: drop-shadow(-6px 6px 14px rgba(0, 0, 0, 0.55));
+    
+}
+
+.UpsellContent {
+    position: relative;
+    z-index: 5;
+    max-width: 350px;
+    margin-left: auto;
+
+}
+
+.UpsellTitle {
+    color: #1a1a1a;
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.65rem;
+    font-weight: 600;
+    margin: 0 0 42px 0;
+}
+
+.UpsellSubtitle {
+    color: #2b2b2b;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0 0 14px 0;
+}
+
+.UpsellFeaturesList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.UpsellFeaturesList li {
+    color: #1a1a1a;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.UpsellFeaturesList li span {
+    font-weight: 800;
+    font-size: 0.95rem;
+}
+
+.UpsellTrialBtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.15s;
+    margin-bottom: 18px;
+}
+
+.UpsellTrialBtn:hover {
+    background-color: #1a1a1a;
+    transform: scale(1.02);
+}
+
+.UpsellDisclaimer {
+    color: #383838;
+    font-size: 0.65rem;
+    line-height: 1.35;
+    margin: 0 0 16px 0;
+}
+
+.UpsellCompareLink {
+    background: transparent;
+    border: none;
+    color: #1a1a1a;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    transition: color 0.2s;
+}
+
+.UpsellCompareLink:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Extended Video Info Section */
+.VideoInfoSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 25% 50px 22%;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.VideoDetailsLeft {
+    display: flex;
+    flex-direction: column;
+    max-width: 1520px;
+    gap: 5px;
+}
+
+.VideoSeriesHeader {
+    display: flex;
+    align-items: center;
+    gap: 92px;
+    margin-bottom: 6px;
+}
+
+.VideoSeriesName {
+    color: rgb(244, 117, 33);
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.SeriesBookmarkBtn {
+    background: transparent;
+    border: none;
+    color: rgb(170, 170, 170);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    margin-left: 330px;
+    
+}
+
+.SeriesBookmarkBtn:hover,
+.SeriesBookmarkBtn.ActiveBookmark {
+    color: rgb(244, 117, 33);
+}
+
+.VideoEpisodeTitle {
+    color: white;
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.VideoMetaTags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgb(160, 160, 160);
+    font-size: 0.85rem;
+    font-family: "DM Sans", sans-serif;
+    margin-bottom: 6px;
+}
+
+.RatingBadge {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 5px 6px;
+    background-color: #4e4e4e;
+    border-radius: 2px;
+    font-size: 0.72rem;
+}
+
+.MetaDot {
+    font-size: 1.2rem;
+    line-height: 0;
+}
+
+.VideoReleaseDate {
+    color: rgb(130, 130, 130);
+    font-size: 0.8rem;
+    margin: 0 0 16px 0;
+}
+
+.VideoFeedbackRow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.FeedbackBtn {
+    background: transparent;
+    border: none;
+    color: rgb(200, 200, 200);
+    padding: 6px 14px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    font-family: "DM Sans", sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.FeedbackBtn:hover,
+.FeedbackBtn.ActiveFeedback {
+    color: white;
+    background-color: #23252b;
+}
+
+.ShareBtn {
+    background-color: transparent;
+    border:none;
+    color: rgb(200, 200, 200);
+    width: 36px;
+    height: 33px;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.ShareBtn:hover {
+    color: white;
+    background-color: #23252b;
+}
+
+.VideoDescriptionText {
+    color: rgb(185, 185, 185);
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin: 0 0 8px 0;
+}
+
+.ShowMoreBtn {
+    background: transparent;
+    border: none;
+    color: rgb(244, 117, 33);
+    font-size: 0.78rem;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    padding: 0;
+    align-self: flex-start;
+    transition: color 0.2s;
+}
+
+.ShowMoreBtn:hover {
+    color: rgb(255, 140, 50);
+}
+
+.VideoActionsRight {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.NextEpisodeCard {
+    display: flex;
+    gap: 14px;
+    padding: 10px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    width: 300px;
+}
+
+.NextEpisodeCard:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.NextEpThumbnail {
+    position: relative;
+    width: 150px;
+    height: 80px;
+    
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-left: -53%;
+}
+
+.NextEpThumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.EpDuration {
+    position: absolute;
+    bottom: 3px;
+    right: 4px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-size: 0.75rem;
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+.NextEpInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    border: none;
+}
+
+.NextEpLabel {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border: none;
+    margin-top: -30px;
+    min-width: 130px;
+}
+
+.NextEpTitle {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 2px 0 20px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.NextEpTags {
+    color: rgb(140, 140, 140);
+    font-size: 0.75rem;
+}
+
+.SeeMoreEpisodesBtn {
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    padding: 10px 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s, border-color 0.2s;
+    width: 70%;
+}
+
+.SeeMoreEpisodesBtn:hover {
+    background-color: #23252b;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.SeeMoreIcon {
+    font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+    .VideoPlayerBox {
+        flex-direction: column;
+        height: auto;
+    }
+    .PlayerUpsellCard {
+        width: 100%;
+    }
+    .UpsellMascotOutside {
+        display: none;
+    }
+    .VideoInfoSection {
+        flex-direction: column;
+    }
+}
+
+
+/* ==========================================================================
+   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .WatchVideoPageContainer {
+        overflow-x: hidden;
+    }
+
+    .WatchVideoMain {
+        padding-top: 0px;
+        
+    }
+
+    .VideoPlayerBox {
+        height: auto;
+    }
+
+    .VideoBgFrame {
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .PlayerUpsellCard {
+        width: 100%;
+        padding: 24px 18px;
+        background-size: 160px auto, cover !important;
+    }
+
+    .UpsellMascotOutside {
+        display: none !important;
+    }
+
+    .UpsellTitle {
+        font-size: 1.3rem;
+    }
+
+    .UpsellFeaturesList li {
+        font-size: 0.85rem;
+    }
+
+    .UpsellTrialBtn {
+        width: 100%;
+        font-size: 0.82rem;
+        padding: 10px 16px;
+    }
+
+    .VideoSeriesName{
+        width: 300px;
+
+    }
+
+    .VideoInfoSection{
+        margin-left: -20%;
+        gap: 40px;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .VideoDetailsArea {
+        padding: 20px 4%;
+    }
+
+    .VideoPrimaryCol h1 {
+        font-size: 1.25rem;
+    }
+
+    .VideoActionsBar {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .NextEpisodePreview {
+        display: none;
+    }
+
+    .SeeMoreEpisodesBtn{
+        width: 360px;
+    }
+}

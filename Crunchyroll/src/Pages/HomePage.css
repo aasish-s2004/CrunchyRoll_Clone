@@ -119,3 +119,46 @@ nav{
     z-index: 90;
     cursor: default;
 }
+
+/* ==========================================================================
+   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    nav {
+        height: 52px;
+    }
+
+    .LogoName {
+        top: 14px;
+        left: 10px;
+    }
+
+    .NavElements {
+        margin-left: 55px;
+        width: calc(100% - 55px);
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .NavElements::-webkit-scrollbar {
+        display: none;
+    }
+
+    .NavElements button {
+        min-width: 4.2rem;
+        font-size: 0.82rem;
+        padding: 0 6px;
+    }
+
+    .NavElementsRight {
+        margin-right: 6px;
+        gap: 2px;
+    }
+
+    .NavElementsRight button {
+        min-width: auto;
+        padding: 0 4px;
+        font-size: 0.82rem;
+    }
+}

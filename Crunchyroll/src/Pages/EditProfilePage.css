@@ -1,0 +1,328 @@
+.EditProfilePageContainer {
+    background-color: black;
+    min-height: 80vh;
+    
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.EditProfileMainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px 80px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 35%;
+    max-width: 35rem;
+}
+
+.EditProfileHeading {
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: white;
+    
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.EditProfileCard {
+    width: 100%;
+    max-width: 540px;
+    background-color: #141519;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.EditProfileBanner {
+    position: relative;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.UpdateBannerOverlay {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.72);
+    color: white;
+    font-size: 0.82rem;
+    font-weight: 600;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 6px 18px;
+    border-radius: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.EditProfileBanner:hover .UpdateBannerOverlay {
+    opacity: 1;
+}
+
+.EditBannerBtn {
+    position: absolute;
+    top: 100px;
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.65);
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s;
+}
+
+.EditBannerBtn:hover {
+    background-color: rgba(20, 20, 20, 0.95);
+}
+
+.EditAvatarWrapper {
+    position: relative;
+    transform: translateY(50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #141519;
+    background-color: #23252b;
+    cursor: pointer;
+}
+
+.EditAvatarImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.AvatarChangeOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 5;
+}
+
+.EditAvatarWrapper:hover .AvatarChangeOverlay {
+    opacity: 1;
+}
+
+.EditAvatarPencil {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 30px;
+    height: 30px;
+    background-color: #23252b;
+    border: 2px solid #141519;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+.EditAvatarHover{
+    filter: opacity(0);
+    cursor: pointer;
+}
+
+.EditAvatarHover:hover{
+    filter: opacity(100);
+}
+
+.EditProfileForm {
+    padding: 65px 56px 36px 56px;
+}
+
+.EditFieldGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.EditFieldLabel {
+    color: rgb(150, 150, 150);
+    font-size: 0.8rem;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin-bottom: 6px;
+}
+
+.EditFieldInput {
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    font-size: 1.05rem;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 6px 0 8px 0;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.EditFieldInput:focus {
+    border-bottom-color: rgb(244, 117, 33);
+}
+
+.EditFieldHint {
+    color: rgb(140, 140, 140);
+    font-size: 0.76rem;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin-top: 8px;
+    line-height: 1.45;
+}
+
+.EditUsernameHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.RandomizeBtn {
+    background: transparent;
+    position: relative;
+    
+    left: 80%;
+    border: none;
+    color: rgb(160, 160, 160);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    transition: color 0.2s;
+}
+
+.RandomizeBtn:hover {
+    color: rgb(244, 117, 33);
+}
+
+.EditProfileActions {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+    width: 100%;
+    max-width: 540px;
+    justify-content: center;
+}
+
+.EditSaveBtn {
+   
+    background:transparent;
+    border: 1px solid rgb(253, 251, 251);
+    color: white;
+    padding: 12px 45px 12px 45px ;
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.EditSaveBtn:hover {
+    background-color: rgb(244, 117, 33);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+.EditCancelBtn {
+    
+    background: transparent;
+    border: 2px solid rgb(244, 117, 33);
+    color: rgb(244, 117, 33);
+    padding: 12px 40px 12px 40px ;
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.EditCancelBtn:hover {
+    background-color: rgba(244, 117, 33, 0.1);
+}
+
+
+
+/* ==========================================================================
+   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .EditProfileMainContent {
+        margin-left: 0;
+        padding: 75px 4% 40px 4%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .EditProfileCard {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .EditProfileHeading {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+
+    .EditFormFields {
+        padding: 20px 16px;
+    }
+
+    .EditActionsRow {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .EditSaveBtn, .EditCancelBtn {
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   TABLET RESPONSIVE STYLES (601px - 1024px)
+   ========================================================================== */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .EditProfileMainContent {
+        margin-left: 0;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 85px 4% 50px 4%;
+    }
+}

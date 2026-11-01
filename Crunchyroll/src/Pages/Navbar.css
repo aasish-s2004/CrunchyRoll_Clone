@@ -1,0 +1,318 @@
+/* ==========================================================================
+   NAVBAR STYLES (Desktop & Mobile)
+   ========================================================================== */
+
+nav.AppNavBar {
+    background-color: rgb(36, 36, 36);
+    width: 100%;
+    height: 52px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.NavHamburgerBtn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 4px 14px 4px 0;
+    line-height: 1;
+}
+
+nav.AppNavBar .LogoName {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.NavbarLogoIcon {
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+}
+
+.NavbarLogoText {
+    color: rgb(244, 117, 33);
+    font-size: 1.17rem;
+    font-family: '"Maven Pro", "Helvetica Neue", Arial, sans-serif';
+    font-weight: 700;
+}
+
+.NavElements {
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
+    height: 100%;
+}
+
+.NavElements button {
+    background-color: transparent;
+    color: rgb(163, 164, 164);
+    border: none;
+    height: 100%;
+    padding: 0 14px;
+    font-size: 0.92rem;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+.NavElements button:hover {
+    background-color: rgb(15, 15, 15);
+    color: rgb(240, 240, 240);
+}
+
+.NavElements p {
+    color: rgb(86, 85, 85);
+    margin: 0 4px;
+    font-size: 18px;
+}
+
+.NavElementsRight {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    height: 100%;
+    gap: 8px;
+}
+
+.NavCrownBtn {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    height: 100%;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.NavCrownIcon {
+    height: 20px;
+    width: auto;
+}
+
+.NavSearchBtn {
+    background: transparent;
+    border: none;
+    color: rgb(163, 164, 164);
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.NavSearchBtn:hover {
+    color: white;
+}
+
+.NavProfileBtn {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    padding: 0 4px;
+    height: 100%;
+}
+
+.NavProfileAvatarImg {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.NavProfileArrow {
+    color: rgb(180, 180, 180);
+    font-size: 9px;
+    margin-left: 2px;
+}
+
+/* ==========================================================================
+   MOBILE DRAWER NAVIGATION MENU (matching reference images)
+   ========================================================================== */
+.MobileNavBackdrop {
+    position: fixed;
+    top: 52px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 52px);
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 190;
+}
+
+.MobileNavDrawer {
+    position: fixed;
+    top: 52px;
+    left: 0;
+    width: 100vw;
+    max-width: 100vw;
+    height: calc(100vh - 52px);
+    background-color: #141519;
+    overflow-y: auto;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 40px 0;
+    box-sizing: border-box;
+}
+
+.MobileNavItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    color: white;
+    font-size: 1.05rem;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    background: transparent;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.MobileNavItem:hover, .MobileNavItem.ActiveItem {
+    color: rgb(244, 117, 33);
+}
+
+.MobileNavItem.ActiveItem {
+    border-left: 3px solid rgb(244, 117, 33);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.MobileNavDivider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.12);
+    margin: 8px 0;
+    width: 100%;
+}
+
+.MobileSubMenu {
+    background-color: #191a1e;
+    display: flex;
+    flex-direction: column;
+}
+
+.MobileSubItem {
+    padding: 12px 34px;
+    color: #b8b8b8;
+    font-size: 0.95rem;
+    font-family: "DM Sans", sans-serif;
+    text-decoration: none;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+.MobileSubItem:hover {
+    color: rgb(244, 117, 33);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.MobileChevron {
+    font-size: 0.75rem;
+    color: rgb(180, 180, 180);
+    transition: transform 0.2s ease;
+}
+
+.MobileChevron.Expanded {
+    transform: rotate(180deg);
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 850px) {
+    .NavHamburgerBtn {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .NavbarLogoText {
+        display: none;
+    }
+
+    .NavElements {
+        display: none;
+        
+    }
+
+    .NavWatchlistDesktopOnly {
+        display: none !important;
+        
+    }
+
+    .NavCrownText {
+        display: none;
+    }
+
+    .NavCrownIcon {
+        height: 22px;
+        margin-right: 0 !important;
+    }
+
+    .NavCrownBtn {
+        min-width: auto !important;
+        padding: 0 6px !important;
+    }
+
+    
+   
+
+    .NavElementsRight {
+        gap: 14px;
+    }
+    .NavProfileArrow{
+        margin-left: 7px;
+        font-size: 11px;
+    }
+}
+
+/* ==========================================================================
+   TABLET RESPONSIVE STYLES (601px - 1024px)
+   ========================================================================== */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .NavHamburgerBtn {
+        display: block;
+        margin-right: 12px;
+    }
+
+    .NavbarLogoText {
+        display: none;
+    }
+
+    .NavElements {
+        display: none;
+    }
+
+    .NavWatchlistDesktopOnly {
+        display: none !important;
+    }
+
+    .MobileNavDrawer {
+        width: 360px;
+        max-width: 80vw;
+        box-shadow: 4px 0 28px rgba(0, 0, 0, 0.75);
+    }
+}

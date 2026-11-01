@@ -1,16 +1,24 @@
 .SearchPageContainer {
     background-color: rgb(29, 27, 27);
     min-height: 100vh;
-    padding-top: 15px;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
 }
 
+.SearchMainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 52px;
+}
+
 .SearchInputArea {
-    width: 48%;
-    max-width: 950px;
+    width: 41%;
+    max-width: 800px;
     margin: 3vh auto 3vh auto;
     position: relative;
     box-sizing: border-box;
@@ -36,12 +44,7 @@
     font-weight: 300;
 }
 
-.SearchResultsGrid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 18px 16px;
-    padding: 0 4.8% 60px 4.8%;
-}
+
 
 @media (max-width: 1200px) {
     .SearchResultsGrid {
@@ -64,3 +67,37 @@
     }
 }
 
+
+
+/* ==========================================================================
+   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .SearchPageContainer {
+        padding: 0;
+        min-height: 100vh;
+    }
+
+    .SearchMainContent {
+        padding: 75px 4% 30px 4%;
+        box-sizing: border-box;
+    }
+
+    .SearchInputArea {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .SearchInputField {
+        font-size: 1.3rem;
+    }
+
+    .SearchResultsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .SearchPosterWrapper {
+        height: 220px;
+    }
+}

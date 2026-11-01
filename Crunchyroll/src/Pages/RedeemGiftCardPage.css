@@ -1,0 +1,223 @@
+.RedeemPageContainer {
+    background-color: black;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.RedeemMainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.RedeemHeroGrid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    width: 100%;
+    max-width: 1050px;
+    padding: 40px 20px 80px 20px;
+    box-sizing: border-box;
+}
+
+.RedeemHeroLeft {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.RedeemMascotImg {
+    max-width: 320px;
+    height: auto;
+    object-fit: contain;
+}
+
+.RedeemHeroRight {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+}
+
+.RedeemTitle {
+    color: white;
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.RedeemSubtitle {
+    color: rgb(160, 160, 160);
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.95rem;
+    margin: 0 0 35px 0;
+}
+
+.RedeemInputWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+    width: 100%;
+}
+
+.RedeemInput {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(244, 117, 33);
+    color: white;
+    font-size: 1rem;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 10px 0;
+    outline: none;
+    width: 100%;
+}
+
+.RedeemInput::placeholder {
+    color: rgb(120, 120, 120);
+}
+
+.RedeemNeedHelp {
+    color: rgb(135, 135, 135);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    margin-top: 8px;
+    align-self: flex-start;
+    transition: color 0.2s;
+}
+
+.RedeemNeedHelp:hover {
+    color: white;
+}
+
+.RedeemContinueBtn {
+    background-color: rgb(244, 117, 33);
+    color: white;
+    border: none;
+    padding: 12px 0;
+    width: 160px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.RedeemContinueBtn:hover {
+    background-color: rgb(255, 140, 50);
+}
+
+.RedeemBottomBanner {
+    width: 100%;
+    padding: 70px 20px;
+    background-size: cover;
+    background-position: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.BannerTitle {
+    color: white;
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.BannerSubtitle {
+    color: rgb(170, 170, 170);
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.92rem;
+    margin: 0 0 25px 0;
+}
+
+.BannerHighlight {
+    color: rgb(244, 117, 33);
+}
+
+.BannerShopBtn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 10px 28px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.BannerShopBtn:hover {
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .RedeemHeroGrid {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+
+
+/* ==========================================================================
+   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .RedeemMainContent {
+        padding: 75px 4% 40px 4%;
+    }
+
+    .RedeemTitle {
+        font-size: 1.5rem;
+    }
+
+    .RedeemCardGraphic {
+        width: 100%;
+        max-width: 290px;
+        height: auto;
+    }
+
+    .RedeemInputWrapper {
+        width: 100%;
+    }
+
+    .RedeemInput {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .RedeemBtn {
+        width: 100%;
+    }
+
+    .BottomBannerCard {
+        flex-direction: column;
+        padding: 24px 18px;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .BannerShopBtn {
+        width: 100%;
+    }
+}

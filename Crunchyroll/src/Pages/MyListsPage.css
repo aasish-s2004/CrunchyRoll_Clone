@@ -1,0 +1,204 @@
+.MyListsPageContainer {
+    background-color: black;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.MyListsMainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 5% 80px 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.MyListsHeaderTitle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.MyListsBookmarkIcon {
+    font-size: 1.8rem;
+    margin-top: 5px;
+}
+
+.MyListsHeaderTitle h1 {
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+    margin: 4px;
+}
+
+.MyListsTabsRow {
+    display: flex;
+    width: 100%;
+    max-width: 1045px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.378);
+    margin-bottom: 25px;
+    padding-left: 290px;
+    
+}
+
+.MyListTabBtn {
+    
+    background: transparent;
+    border: none;
+    color: rgb(160, 160, 160);
+    padding: 19px 30px;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.MyListTabBtn:hover {
+    color: white;
+}
+
+.MyListTabBtn.ActiveTab {
+    color: white;
+}
+
+.MyListTabBtn.ActiveTab::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(244, 117, 33);
+}
+
+.MyListsDashedCard {
+    width: 100%;
+    max-width: 900px;
+    min-width: 1050px;
+    border: 1px dashed rgba(255, 255, 255, 0.607);
+    border-radius: 4px;
+    padding: 50px 80px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 420px;
+}
+
+.EmptyStateBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.EmptyStateImg {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: contain;
+    margin-bottom: 4px;
+}
+
+.EmptyStateTitle {
+    color: rgb(193, 190, 190);
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.rem;
+    font-weight: 400;
+    margin: 0 0 4px 0;
+}
+
+.EmptyStateSubtitle {
+    color: rgb(187, 186, 186);
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.rem;
+    margin: 0 0 24px 0;
+}
+
+.EmptyStateActionBtn {
+    background-color: rgb(244, 117, 33);
+    color: white;
+    border: none;
+    padding: 12px 34px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.EmptyStateActionBtn:hover {
+    background-color: rgb(255, 140, 50);
+}
+
+
+
+/* ==========================================================================
+   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .MyListsMainContent {
+        padding: 75px 4% 40px 4%;
+    }
+
+    .MyListsTabsRow {
+        padding-left: 0;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .MyListTabBtn {
+        padding: 12px 14px;
+        font-size: 0.75rem;
+    }
+
+    .MyListsDashedCard {
+        min-width: auto;
+        width: 100%;
+        padding: 30px 15px;
+        min-height: 280px;
+    }
+
+    .EmptyStateImg {
+        max-width: 170px;
+        max-height: 170px;
+    }
+
+    .EmptyStateTitle {
+        font-size: 0.95rem;
+    }
+
+    .EmptyStateSubtitle {
+        font-size: 0.85rem;
+    }
+}
+
+/* ==========================================================================
+   TABLET RESPONSIVE STYLES (601px - 1024px)
+   ========================================================================== */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .MyListsMainContent {
+        padding: 85px 5% 40px 5%;
+    }
+
+    .MyListsDashedCard {
+        min-width: auto;
+        width: 100%;
+        max-width: 92vw;
+        padding: 40px 20px;
+    }
+
+    .MyListsTabsRow {
+        padding-left: 0;
+        justify-content: center;
+    }
+}
