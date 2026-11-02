@@ -1048,7 +1048,7 @@
    ========================================================================== */
 @media (max-width: 600px) {
     .HeroBackground{
-        width: 400px;
+        width: 470px;
         max-height: 300px;
     }
     .HeroNavbar {
@@ -1057,7 +1057,7 @@
 
     .NavbarLogoImg{
         position: absolute;
-        left: -80%;
+        left: -65%;
         top: 20%;
     }
 
@@ -1078,7 +1078,7 @@
     .HeroContent {
         padding: 110px 3% 10px 4%;
         position: absolute;
-        left: -60%;
+        left: -45%;
         top: 0.5%;
         width: 40px;
     }
@@ -1125,7 +1125,8 @@
     }
 
     .WatchSection {
-        padding: 40px 4%;
+        padding: 20px 1%;
+
     }
 
     .WatchTitle {
@@ -1134,11 +1135,12 @@
 
     .WatchCard {
         flex: 0 0 145px;
-        width: 145px;
+        width: 175px;
     }
 
     .WatchPosterWrapper {
-        height: 220px;
+        height: 240px;
+        position: relative;
     }
 
     .WatchScrollBtn {

@@ -62,7 +62,7 @@
         min-height: 500px;
     }
     .BlacktorchBgImg img{
-        width: 400px;
+        width: 450px;
         height: 250px;
     }
     .BlackTorchLogo img {
@@ -92,7 +92,7 @@
     }
     .StartWatching button {
         font-size: 75%;
-        padding: 4px 30px;
+        padding: 5px 45px;
         
     }
 }
