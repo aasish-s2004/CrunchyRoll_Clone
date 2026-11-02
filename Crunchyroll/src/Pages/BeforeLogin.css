@@ -1057,7 +1057,7 @@
 
     .NavbarLogoImg{
         position: absolute;
-        left: -70%;
+        left: -80%;
         top: 20%;
     }
 
@@ -1076,7 +1076,7 @@
     }
 
     .HeroContent {
-        padding: 110px 3% 10px 4%;
+        padding: 110px 0% 15px 0%;
         position: absolute;
         left: -53%;
         top: 0.5%;
