@@ -15,7 +15,6 @@ function Navbar({ active }) {
     const [showPremium, setShowPremium] = useState(false)
     const [showNews, setShowNews] = useState(false)
 
-    // Mobile state
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [mobileCategoriesOpen, setMobileCategoriesOpen] = useState(false)
     const [mobileNewsOpen, setMobileNewsOpen] = useState(false)
@@ -43,7 +42,6 @@ function Navbar({ active }) {
             )}
 
             <nav className="AppNavBar">
-                {/* Mobile Hamburger Toggle Button */}
                 <button
                     type="button"
                     className="NavHamburgerBtn"
@@ -56,7 +54,6 @@ function Navbar({ active }) {
                     {mobileMenuOpen ? '✕' : '☰'}
                 </button>
 
-                {/* Logo & Brand Name */}
                 <Link to="/home" style={{ textDecoration: 'none', color: 'inherit' }} onClick={closeAll}>
                     <div className="LogoName">
                         <img className="NavbarLogoIcon" src={Logo} alt="Logo" />
@@ -64,7 +61,6 @@ function Navbar({ active }) {
                     </div>
                 </Link>
 
-                {/* Desktop Navigation Links */}
                 <div className="NavElements">
                     <Link to="/new" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <button style={{ minWidth: "4rem", color: active === 'new' ? 'rgb(244, 117, 33)' : undefined }}>New</button>
@@ -133,7 +129,6 @@ function Navbar({ active }) {
                     </div>
                 </div>
 
-                {/* Right Action Icons (Desktop & Mobile) */}
                 <div className="NavElementsRight">
                     <div
                         className="NavPremiumWrapper"
@@ -169,7 +164,6 @@ function Navbar({ active }) {
                         </button>
                     </Link>
 
-                    {/* Watchlist Bookmark Icon (Desktop Only, matches reference image) */}
                     <Link to="/watchlist" className="NavWatchlistDesktopOnly" style={{ textDecoration: 'none', color: 'inherit', height: '100%', display: 'flex', alignItems: 'center' }}>
                         <button style={{
                             minWidth: "3rem",
@@ -185,7 +179,6 @@ function Navbar({ active }) {
                         }}>⛉</button>
                     </Link>
 
-                    {/* Profile Avatar & Popup Toggle */}
                     <div className="NavProfileWrapper">
                         <button
                             onClick={() => {
@@ -206,7 +199,6 @@ function Navbar({ active }) {
                 </div>
             </nav>
 
-            {/* Mobile Navigation Drawer (1:1 with reference images) */}
             {mobileMenuOpen && (
                 <div className="MobileNavDrawer">
                     <Link to="/new" className={`MobileNavItem ${active === 'new' ? 'ActiveItem' : ''}`} onClick={closeAll}>
@@ -229,7 +221,6 @@ function Navbar({ active }) {
                         <span>Release Calendar</span>
                     </Link>
 
-                    {/* Categories Accordion */}
                     <div className="MobileAccordionBlock">
                         <button
                             type="button"
@@ -286,7 +277,6 @@ function Navbar({ active }) {
                         <span>Games</span>
                     </Link>
 
-                    {/* News Accordion */}
                     <div className="MobileAccordionBlock">
                         <button
                             type="button"

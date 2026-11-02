@@ -20,7 +20,6 @@ function WatchVideoPage() {
             <Navbar active="watch" />
 
             <div className="WatchVideoMain">
-                {/* Video Player Box with Frieren Scene */}
                 <div className="VideoPlayerBox">
                     <img
                         src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain%2Cformat=auto%2Cquality=85%2Cwidth=1200/display/keyart/T00384010-base_asset_2x3-en-US"
@@ -30,7 +29,6 @@ function WatchVideoPage() {
 
                     <div className="VideoOverlayShade"></div>
 
-                    {/* Premium Upsell Card on the right */}
                     <div
                         className="PlayerUpsellCard"
                         style={{
@@ -40,7 +38,6 @@ function WatchVideoPage() {
                             backgroundSize: '240px auto, cover'
                         }}
                     >
-                        {/* Mascot standing outside the card on the left */}
                         <img
                             src={LeaningHime}
                             alt="Crunchyroll Mascot"
@@ -75,7 +72,6 @@ function WatchVideoPage() {
                     </div>
                 </div>
 
-                {/* Extended Video Info Section (matching Frieren reference screenshot) */}
                 <div className="VideoInfoSection">
                     <div className="VideoDetailsLeft">
                         <div className="VideoSeriesHeader">
@@ -99,7 +95,6 @@ function WatchVideoPage() {
 
                         <p className="VideoReleaseDate">Released on Oct 13, 2023</p>
 
-                        {/* Likes / Dislikes & Share Row */}
                         <div className="VideoFeedbackRow">
                             <button
                                 className={`FeedbackBtn ${liked ? 'ActiveFeedback' : ''}`}
@@ -118,7 +113,6 @@ function WatchVideoPage() {
                             </button>
                         </div>
 
-                        {/* Episode Synopsis */}
                         <p className={`VideoDescriptionText ${showFullDesc ? 'Expanded' : ''}`}>
                             The world celebrates the Demon King's defeat at the hands of the Hero and his companions. Now that their great adventure is over, what will Frieren the mage do next?
                             {showFullDesc && (

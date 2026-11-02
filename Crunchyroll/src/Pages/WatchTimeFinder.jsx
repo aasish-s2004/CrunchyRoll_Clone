@@ -13,9 +13,7 @@ const quickTimeMap = {
     '2+ HOURS': 120
 }
 
-// Master anime collection grouped into 10 min, 20 min, 30 min, 40 min, and 50 min tiers
 const animeCollection = [
-    // ---------------- 10 MIN (4 Anime) ----------------
     {
         id: 1,
         title: "Bananya and the Mysterious Kingdom",
@@ -65,7 +63,6 @@ const animeCollection = [
         synopsis: "Kusuo Saiki possesses all manner of psychic abilities. He tries to live a normal, quiet life, but his eccentric classmates constantly pull him into comical chaos."
     },
 
-    // ---------------- 20 MIN (5 Anime) ----------------
     {
         id: 5,
         title: "Dragon Ball Super",
@@ -127,7 +124,6 @@ const animeCollection = [
         synopsis: "In a futuristic yet feudal Japan, a samurai with the Number Two headband avenges his master while fending off endless assassins chasing the ultimate title."
     },
 
-    // ---------------- 30 MIN (5 Anime) ----------------
     {
         id: 10,
         title: "Haikyu!!",
@@ -189,7 +185,6 @@ const animeCollection = [
         synopsis: "Tanjiro Kamado's peaceful life is shattered when demons slaughter his family. Joining the Demon Slayer Corps, he searches for a cure for his sister Nezuko."
     },
 
-    // ---------------- 40 MIN (5 Anime) ----------------
     {
         id: 15,
         title: "My Hero Academia",
@@ -251,7 +246,6 @@ const animeCollection = [
         synopsis: "Shin Youngwoo, known as Grid in Satisfy, discovers a legendary blacksmith class and transforms from an unlucky player into an unmatched warrior."
     },
 
-    // ---------------- 50 MIN (5 Anime) ----------------
     {
         id: 20,
         title: "That Time I Got Reincarnated as a Slime",
@@ -314,7 +308,6 @@ const animeCollection = [
     }
 ]
 
-// Dynamic subtitle message helper based on selected minutes
 const getAvailableTimeMessage = (minutes) => {
     if (minutes < 20) {
         return "You have enough time for a quick short-form episode."
@@ -340,7 +333,6 @@ function WatchTimeFinder() {
     const [showResults, setShowResults] = useState(true)
     const [appliedMinutes, setAppliedMinutes] = useState(35)
 
-    // Quick time button selection: sets selectedTime, syncs customMinutes and filters immediately
     const handleQuickSelect = (time) => {
         setSelectedTime(time)
         const mins = quickTimeMap[time] || 20
@@ -349,7 +341,6 @@ function WatchTimeFinder() {
         setShowResults(true)
     }
 
-    // Custom minutes input handler
     const handleCustomChange = (e) => {
         const value = parseInt(e.target.value, 10)
         const mins = isNaN(value) ? '' : value
@@ -361,7 +352,6 @@ function WatchTimeFinder() {
         else setSelectedTime(null)
     }
 
-    // Find anime button: filters collection according to available time and smooth scrolls to results
     const handleFindAnime = () => {
         const mins = Number(customMinutes) > 0 ? Number(customMinutes) : 20
         setAppliedMinutes(mins)
@@ -374,7 +364,6 @@ function WatchTimeFinder() {
         }, 50)
     }
 
-    // Change time button: scrolls smoothly back to hero and focuses custom input
     const handleChangeTime = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
         const inputElem = document.querySelector('.WTFCustomInput')
@@ -383,14 +372,10 @@ function WatchTimeFinder() {
         }
     }
 
-    // Smart filtering:
-    // Perfect For You: episode duration <= appliedMinutes
     const perfectForYouList = animeCollection.filter(anime => anime.duration <= appliedMinutes)
 
-    // Have A Little More Time: anime with longer episode durations
     let haveMoreTimeList = animeCollection.filter(anime => anime.duration > appliedMinutes)
     if (haveMoreTimeList.length === 0) {
-        // If user selected high duration, recommend the 50 min specials
         haveMoreTimeList = animeCollection.filter(anime => anime.duration >= 50)
     }
 

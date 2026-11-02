@@ -193,7 +193,6 @@ function AnimeSliderCategory({ title = "Trending Anime in India", animeList = de
                                     }}
                                 />
 
-                                {/* Card Hover Overlay as shown in reference image */}
                                 <div className="CardHoverOverlay">
                                     <h4 className="HoverOverlayTitle">{anime.title}</h4>
                                     <div className="HoverOverlayRating">

@@ -167,7 +167,6 @@
     margin-top: 3px;
 }
 
-/* Hover overlay matching uploaded screenshot */
 .CardHoverOverlay {
     position: absolute;
     top: 0;
@@ -277,9 +276,7 @@
 
 
 
-/* ==========================================================================
-   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
-   ========================================================================== */
+
 @media (max-width: 600px) {
     .SliderCategoryTitle {
         font-size: 1.25rem;
@@ -314,9 +311,7 @@
     }
 }
 
-/* ==========================================================================
-   TABLET RESPONSIVE STYLES (601px - 1024px)
-   ========================================================================== */
+
 @media (min-width: 601px) and (max-width: 1024px) {
     .SliderCategoryTitle {
         font-size: 1.45rem;

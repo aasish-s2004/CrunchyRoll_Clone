@@ -45,7 +45,6 @@
     background: linear-gradient(to right, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.5) 100%);
 }
 
-/* Orange Premium Card */
 .PlayerUpsellCard {
     position: relative;
     z-index: 10;
@@ -62,7 +61,6 @@
     background-color: #f46108;
 }
 
-/* Mascot girl standing outside the card on the left */
 .UpsellMascotOutside {
     position: absolute;
     left: -210px;
@@ -171,7 +169,6 @@
     text-decoration: underline;
 }
 
-/* Extended Video Info Section */
 .VideoInfoSection {
     display: flex;
     justify-content: space-between;
@@ -454,9 +451,6 @@
 }
 
 
-/* ==========================================================================
-   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
-   ========================================================================== */
 @media (max-width: 600px) {
     .WatchVideoPageContainer {
         overflow-x: hidden;

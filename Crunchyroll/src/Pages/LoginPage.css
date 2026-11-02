@@ -8,8 +8,9 @@
 .LoginHead {
     position: absolute;
     background-color: rgba(27, 27, 27, 0.418);
-    padding: 1% 44.7% 0.5% 45.3%;
+    padding: 2% 44.7% 0.5% 45.3%;
     cursor: pointer;
+    
     
 }
 .LoginLogin {
@@ -135,9 +136,6 @@
 }
 
 
-/* ==========================================================================
-   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
-   ========================================================================== */
 @media (max-width: 600px) {
     .LoginBackground {
         display: flex;
@@ -304,9 +302,6 @@
     }
 }
 
-/* ==========================================================================
-   TABLET RESPONSIVE STYLES (601px - 1024px)
-   ========================================================================== */
 @media (min-width: 601px) and (max-width: 1024px) {
     .LoginHead {
         padding: 14px 0;

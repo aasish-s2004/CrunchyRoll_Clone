@@ -14,7 +14,6 @@ import MyListsPage from "./Pages/MyListsPage.jsx"
 import NotificationCenterPage from "./Pages/NotificationCenterPage.jsx"
 import RedeemGiftCardPage from "./Pages/RedeemGiftCardPage.jsx"
 import WatchVideoPage from "./Pages/WatchVideoPage.jsx"
-// 15 Separate Category Pages
 import ActionPage from "./Pages/CategoyPages/ActionPage.jsx"
 import AdventurePage from "./Pages/CategoyPages/AdventurePage.jsx"
 import ComedyPage from "./Pages/CategoyPages/ComedyPage.jsx"
@@ -50,26 +49,21 @@ function App() {
         <Route path="/search" element={<SearchPage/>}/>
         <Route path="/wtf" element={<WatchTimeFinder/>}/>
         
-        {/* Profile & Switch Profile */}
         <Route path="/profile" element={<EditProfilePage/>}/>
         <Route path="/profiles/manage/:id" element={<EditProfilePage/>}/>
         <Route path="/switch-profile" element={<SwitchProfilePage/>}/>
         <Route path="/discover" element={<SwitchProfilePage/>}/>
 
-        {/* My Lists (Watchlist, Crunchylists, History) */}
         <Route path="/watchlist" element={<MyListsPage initialTab="watchlist"/>}/>
         <Route path="/crunchylists" element={<MyListsPage initialTab="crunchylists"/>}/>
         <Route path="/history" element={<MyListsPage initialTab="history"/>}/>
 
-        {/* Notifications & Gift Card */}
         <Route path="/notifications" element={<NotificationCenterPage/>}/>
         <Route path="/redeem" element={<RedeemGiftCardPage/>}/>
 
-        {/* Video Player Page */}
         <Route path="/watch" element={<WatchVideoPage/>}/>
         <Route path="/watch/:id" element={<WatchVideoPage/>}/>
 
-        {/* 15 Dedicated Category Pages */}
         <Route path="/action" element={<ActionPage/>}/>
         <Route path="/videos/action" element={<ActionPage/>}/>
         <Route path="/category/action" element={<ActionPage/>}/>
@@ -130,7 +124,6 @@ function App() {
         <Route path="/videos/thriller" element={<ThrillerPage/>}/>
         <Route path="/category/thriller" element={<ThrillerPage/>}/>
 
-        {/* Dynamic Catch-All Route for Categories / Genres */}
         <Route path="/category/:genre" element={<ActionPage/>}/>
         <Route path="/videos/:genre" element={<ActionPage/>}/>
       </Routes>

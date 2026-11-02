@@ -12,7 +12,6 @@ function ActionPage() {
         subtitle: "For all your fist flying and huge explosion needs!"
     }
 
-    // 10 sections with unique shuffle seeds
     const sections = useMemo(() => [
         { id: 1, title: "Popular", anime: getShuffledCategoryAnime(11) },
         { id: 2, title: "New", anime: getShuffledCategoryAnime(13) },

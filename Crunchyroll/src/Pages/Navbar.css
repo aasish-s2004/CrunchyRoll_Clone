@@ -1,6 +1,3 @@
-/* ==========================================================================
-   NAVBAR STYLES (Desktop & Mobile)
-   ========================================================================== */
 
 nav.AppNavBar {
     background-color: rgb(36, 36, 36);
@@ -143,9 +140,6 @@ nav.AppNavBar .LogoName {
     margin-left: 2px;
 }
 
-/* ==========================================================================
-   MOBILE DRAWER NAVIGATION MENU (matching reference images)
-   ========================================================================== */
 .MobileNavBackdrop {
     position: fixed;
     top: 52px;
@@ -240,9 +234,6 @@ nav.AppNavBar .LogoName {
     transform: rotate(180deg);
 }
 
-/* ==========================================================================
-   RESPONSIVE MEDIA QUERIES
-   ========================================================================== */
 @media (max-width: 850px) {
     .NavHamburgerBtn {
         display: block;
@@ -289,9 +280,6 @@ nav.AppNavBar .LogoName {
     }
 }
 
-/* ==========================================================================
-   TABLET RESPONSIVE STYLES (601px - 1024px)
-   ========================================================================== */
 @media (min-width: 601px) and (max-width: 1024px) {
     .NavHamburgerBtn {
         display: block;

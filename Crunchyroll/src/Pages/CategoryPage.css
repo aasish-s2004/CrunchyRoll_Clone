@@ -1,28 +1,16 @@
-/* ==========================================================================
-   CATEGORY PAGES STYLING (Action, Adventure, Comedy, Drama, etc.)
-   ==========================================================================
-   
-   EDIT CARD & CONTAINER SIZES HERE:
-   You can change the values below to easily resize the cards and the container!
-   -------------------------------------------------------------------------- */
 
 .CategoryPageContainer {
-    /* 1. CONTAINER PADDING (Left & Right margins of the whole page content) */
     --category-container-padding: 0% 2.8% 0%;
     max-width: 57%;
     margin-left: 20%;
 
-    /* 2. CARD SIZES (Change width & height of the anime cards) */
-    --category-card-width: 159px;          /* Width of each card (e.g. 180px, 200px, 220px) */
-    --category-card-height: 245px;         /* Height of the poster image (e.g. 270px, 300px) */
+    --category-card-width: 159px;
+    --category-card-height: 245px;
     
-    /* 3. CARD SPACING */
-    --category-card-gap: 22px;             /* Space between adjacent cards */
+    --category-card-gap: 22px;
 
-    /* 4. SLIDER SECTION SPACING */
-    --category-section-gap: 36px;          /* Vertical space between sliding rows */
+    --category-section-gap: 36px;
 
-    /* Page background */
     background-color: black;
     min-height: 100vh;
     color: white;
@@ -32,9 +20,6 @@
     box-sizing: border-box;
 }
 
-/* ==========================================================================
-   HERO BANNER (Category Title, Icon, Subtitle)
-   ========================================================================== */
 .CategoryHeroBanner {
     padding: 105px 4.8% 25px 4.8%;
     display: flex;
@@ -71,9 +56,6 @@
     margin: 0;
 }
 
-/* ==========================================================================
-   SLIDERS CONTAINER (10 Sections: Popular, New, Adventure, etc.)
-   ========================================================================== */
 .CategorySlidersWrapper {
     width: 100%;
     margin-top: 15px;
@@ -143,10 +125,6 @@
     display: none;
 }
 
-/* ==========================================================================
-   ANIME CARDS & POSTER WRAPPER
-   (Adjust width and height here directly if not using CSS variables)
-   ========================================================================== */
 .CategoryAnimeCard {
     flex: 0 0 var(--category-card-width, 195px);
     width: var(--category-card-width, 195px);
@@ -217,9 +195,6 @@
     margin-top: 3px;
 }
 
-/* ==========================================================================
-   NAVIGATION SLIDER ARROWS (Left & Right)
-   ========================================================================== */
 .CategoryArrowBtn {
     position: absolute;
     top: 48%;
@@ -257,9 +232,6 @@
     border-bottom-left-radius: 4px;
 }
 
-/* ==========================================================================
-   CARD HOVER OVERLAY (Rating, Seasons, Synopsis, Action Buttons)
-   ========================================================================== */
 .CategoryCardHoverOverlay {
     position: absolute;
     top: 0;
@@ -393,9 +365,6 @@
     display: inline-block;
 }
 
-/* ==========================================================================
-   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
-   ========================================================================== */
 @media (max-width: 600px) {
     .CategoryPageContainer {
         --category-container-padding: ;
@@ -447,9 +416,6 @@
     }
 }
 
-/* ==========================================================================
-   TABLET RESPONSIVE STYLES (601px - 1024px)
-   ========================================================================== */
 @media (min-width: 601px) and (max-width: 1024px) {
     .CategoryPageContainer {
         --category-card-width: 165px;

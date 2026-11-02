@@ -165,7 +165,6 @@
     
 }
 
-/* Premium Modal */
 .PremiumModalBackdrop {
     position: fixed;
     top: 0;
@@ -271,9 +270,6 @@
 
 
 
-/* ==========================================================================
-   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
-   ========================================================================== */
 @media (max-width: 600px) {
     .SwitchProfileTitle {
         font-size: 1.5rem;
@@ -318,9 +314,6 @@
     }
 }
 
-/* ==========================================================================
-   TABLET RESPONSIVE STYLES (601px - 1024px)
-   ========================================================================== */
 @media (min-width: 601px) and (max-width: 1024px) {
     .SwitchProfileContainer {
         padding: 90px 4% 40px 4%;

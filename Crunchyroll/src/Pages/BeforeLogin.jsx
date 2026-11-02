@@ -217,10 +217,8 @@ function BeforeLoginPage(){
     return(
         <div className="BeforeLoginPageContainer">
 
-            {/* Background Hero */}
             <div className="HeroBackground" style={{ backgroundImage: `url(${BgImg})` }}></div>
 
-            {/* Navbar */}
             <div className="HeroNavbar">
                 <div className="NavbarLogoContainer">
                     <img className="NavbarLogoImg" src={Logo} alt="Logo" />
@@ -235,20 +233,17 @@ function BeforeLoginPage(){
                 </div>
             </div>
 
-            {/* Hero Main Content */}
             <div className="HeroContent">
                 <h1 className="HeroTitle">The world's largest dedicated Anime collection on demand</h1>
                 <h2 className="HeroSubtitle">Join Crunchyroll and discover the world of Anime</h2>
                 <button className="HeroTrialBtn" onClick={scrollToPlans}>START FREE TRIAL</button>
             </div>
 
-            {/* SECTION 1: Limited Time Offer (Plans) */}
             <div id="plansSection" className="PlansSection">
                 <div className="PlansHeader">
                     <h1 className="PlansTitle">Limited Time Offer</h1>
                 </div>
 
-                {/* Monthly / Yearly Toggle */}
                 <div className="BillingToggleContainer">
                     <div className="BillingPill">
                         <button
@@ -267,9 +262,7 @@ function BeforeLoginPage(){
                     </div>
                 </div>
 
-                {/* 3 Plan Cards */}
                 <div className="PlanCardsContainer">
-                    {/* Card 1: Fan */}
                     <div className="PlanCard">
                         <h2 className="PlanCardTitle">Fan</h2>
                         <p className="PlanCardPrice">
@@ -293,7 +286,6 @@ function BeforeLoginPage(){
                         </div>
                     </div>
 
-                    {/* Card 2: Mega Fan (Featured) */}
                     <div className="PlanCard PlanCardMega">
                         <p className="PopularBadge">
                             ✦ Most Popular ✦
@@ -321,7 +313,6 @@ function BeforeLoginPage(){
                         </div>
                     </div>
 
-                    {/* Card 3: Ultimate Fan */}
                     <div className="PlanCard">
                         <h2 className="PlanCardTitle">Ultimate Fan</h2>
                         <p className="PlanCardPrice">
@@ -348,7 +339,6 @@ function BeforeLoginPage(){
                     </div>
                 </div>
 
-                {/* Footnote */}
                 <p className="PlansFootnote">
                     *Plans may include trailers and promotional messaging for Crunchyroll content and services, or related products.
                     Plan automatically renews at the regular price selected in the plan comparison. If you are eligible for the limited-time special
@@ -358,7 +348,6 @@ function BeforeLoginPage(){
                 </p>
             </div>
 
-            {/* SECTION 2: Be the First to Watch */}
             <div className="WatchSection">
                 <div className="WatchHeader">
                     <h1 className="WatchTitle">Be the First to Watch</h1>
@@ -367,7 +356,6 @@ function BeforeLoginPage(){
                     </p>
                 </div>
 
-                {/* Anime Cards Row with Scroll Button */}
                 <div className="WatchSliderWrapper">
                     <div ref={firstToWatchRef} className="WatchCardsRow">
                         {firstToWatchAnime.map((anime) => (
@@ -399,7 +387,6 @@ function BeforeLoginPage(){
                 </div>
             </div>
 
-            {/* SECTION 3: Already a Member? & Get More with Premium */}
             <div className="MemberSection">
                 <h2 className="MemberTitle">Already a Member?</h2>
                 <Link to="/login" style={{ textDecoration: 'none' }}>
@@ -422,7 +409,6 @@ function BeforeLoginPage(){
                     <span style={{ fontSize: '1.1rem' }}>↑</span>
                 </button>
 
-                {/* 6 Features */}
                 <div className="PremiumFeaturesGrid">
                     <div className="PremiumFeatureItem">
                         <img src={PremiumIcon1} alt="Ad-free streaming" className="PremiumFeatureIcon" />
@@ -460,7 +446,6 @@ function BeforeLoginPage(){
                 </p>
             </div>
 
-            {/* SECTION 4: Introducing Crunchyroll Manga! */}
             <div className="MangaSection" id="mangaSection">
                 <div className="MangaCard" style={{ backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.85) 20%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.2) 70%, transparent 100%), url(${MangaBg}) ` }}>
                     <div className="MangaLogoRow MobileMangaLogo">
@@ -500,7 +485,6 @@ function BeforeLoginPage(){
                 </div>
             </div>
 
-            {/* SECTION 5: FAQ */}
             <div className="FaqSection">
                 <h1 className="FaqTitle">FAQ</h1>
 
@@ -525,18 +509,14 @@ function BeforeLoginPage(){
                     </p>
                 </div>
 
-                {/* Device availability footnote */}
                 <p className="AvailabilityNote">
                     *Device and content availability vary by country or region.
                 </p>
             </div>
 
-            {/* SECTION 6: EXTENDED FOOTER CONTINUATION (Images 1 & 2) */}
             <footer className="ExtendedFooter">
     
-                {/* 6 Columns Grid */}
                 <div className="FooterColumnsGrid">
-                    {/* Column 1: Key Pages */}
                     <div className="FooterNavCol">
                         <h4 className="FooterColHeader">Key Pages</h4>
                         <div className="FooterNavLinksList">
@@ -553,7 +533,6 @@ function BeforeLoginPage(){
                         </div>
                     </div>
 
-                    {/* Column 2: Genre */}
                     <div className="FooterNavCol">
                         <h4 className="FooterColHeader">Genre</h4>
                         <div className="FooterNavLinksList">
@@ -575,7 +554,6 @@ function BeforeLoginPage(){
                         </div>
                     </div>
 
-                    {/* Column 3: Top 15 Popular Series */}
                     <div className="FooterNavCol">
                         <h4 className="FooterColHeader">Top 15 Popular Series</h4>
                         <div className="FooterNavLinksList">
@@ -597,7 +575,6 @@ function BeforeLoginPage(){
                         </div>
                     </div>
 
-                    {/* Column 4: Languages */}
                     <div className="FooterNavCol">
                         <h4 className="FooterColHeader">Languages</h4>
                         <div className="FooterNavLinksList">
@@ -620,7 +597,6 @@ function BeforeLoginPage(){
                         </div>
                     </div>
 
-                    {/* Column 5: Crunchyroll */}
                     <div className="FooterNavCol">
                         <h4 className="FooterColHeader">Crunchyroll</h4>
                         <div className="FooterNavLinksList">
@@ -640,7 +616,6 @@ function BeforeLoginPage(){
                         </div>
                     </div>
 
-                    {/* Column 6: Account & Connect With Us */}
                     <div className="FooterNavCol">
                         <h4 className="FooterColHeader">Account</h4>
                         <div className="FooterNavLinksList">
@@ -659,7 +634,6 @@ function BeforeLoginPage(){
                     </div>
                 </div>
 
-                {/* Bottom Sub-bar */}
                 <div className="FooterSubBar">
                     <div className="SonyPicturesText">
                         <span className="SonyBold">SONY PICTURES</span> | © Crunchyroll, LLC
@@ -670,7 +644,6 @@ function BeforeLoginPage(){
                     </button>
                 </div>
 
-                {/* Bottom Descriptive Paragraphs */}
                 <div className="FooterDescriptiveParagraphs">
                     <div className="FooterDescCol">
                         <p>

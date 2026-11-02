@@ -129,9 +129,6 @@
 
 
 
-/* ==========================================================================
-   CARD HOVER OVERLAY (Rating, Seasons, Synopsis, Action Buttons)
-   ========================================================================== */
 .CategoryCardHoverOverlay {
     position: absolute;
     top: 0;
@@ -258,9 +255,6 @@
     color: rgb(244, 117, 33);
 }
 
-/* ==========================================================================
-   MOBILE ONLY RESPONSIVE STYLES (max-width: 600px)
-   ========================================================================== */
 @media (max-width: 600px) {
     .PopularPageContainer {
         padding: 75px 4% 40px 4%;
@@ -316,9 +310,6 @@
     }
 }
 
-/* ==========================================================================
-   TABLET RESPONSIVE STYLES (601px - 1024px)
-   ========================================================================== */
 @media (min-width: 601px) and (max-width: 1024px) {
     .PopularPageContainer {
         padding: 90px 6% 70px 6%;

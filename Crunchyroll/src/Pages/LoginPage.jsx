@@ -43,7 +43,7 @@ function LoginPage () {
 
     return(
         <div className='LoginBackground'>
-           <Link to="/"> <div className='LoginHead'>
+           <Link to="/"> <div className='LoginHead' >
                                 <img style={{height:'3.4vh'}} src={Logo} alt="Logo" />
                                 <span style={{
                                     color: 'rgb(244, 117, 33)',
@@ -64,7 +64,6 @@ function LoginPage () {
 
                             
 
-                            {/* <Link to="/home">*/}<div className='NextButton'><button type='submit' onClick={emailCheck}>NEXT</button></div>{/*</Link>*/} 
                             </form>
 
 
