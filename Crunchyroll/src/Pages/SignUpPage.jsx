@@ -1,6 +1,7 @@
 import './SignUpPage.css'
 import Logo from '../assets/Logo.png'
 import { Link } from 'react-router-dom'
+import Flag from '../assets/Flag_Imoji.png'
 
 function SignUpPage () {
     return(
@@ -23,11 +24,14 @@ function SignUpPage () {
 
                             <div className='SignUpLogin' ><h1 style={{fontWeight:"500"}}>Create Account</h1></div>
 
-                            <div className='InputSpace'>
-                                <input type="text" placeholder='Email or Phone Number' />
+                            <div className='InputSpace' >
+                                <img src={Flag} alt="flag" />
+                                <h2>91+</h2>
+                                <input style={{maxWidth:"22rem", marginLeft:"15%"}} type="text" placeholder='Email or Phone Number' />
+                                
                             </div>
 
-                            <Link to="/home"><div className='NextButton'><button>NEXT</button></div></Link>
+                            <div className='NextButton'><button>NEXT</button></div>
 
 
                             <Link to="/login"><div className='SignUpForgot'><h1>Already have an account?<span> LOG IN</span></h1></div></Link>
