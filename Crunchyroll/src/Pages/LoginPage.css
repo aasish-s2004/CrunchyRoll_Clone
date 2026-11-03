@@ -63,9 +63,6 @@
     position: absolute;
     top: 43.4%;
     left: 39.4%;
-}
-
-.NextButton button {
     width: 26rem;
     height: 4vh;
     background-color: black;
@@ -74,6 +71,10 @@
     border: none;
     border: solid 2px;
     cursor: pointer;
+}
+
+.NextButton button {
+    
 }
 .LoginForgot{
     position: absolute;

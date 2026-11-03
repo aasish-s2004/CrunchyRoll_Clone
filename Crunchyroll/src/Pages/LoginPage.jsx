@@ -62,7 +62,7 @@ function LoginPage () {
                                 <input type="email" placeholder='Email or Phone Number' />
                             </div>
 
-                            
+                            <button className='NextButton' onClick={emailCheck}>NEXT</button>
 
                             </form>
 
